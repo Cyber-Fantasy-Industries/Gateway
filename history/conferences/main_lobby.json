@@ -1,0 +1,78 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "Lobby gestartet"
+    },
+    {
+      "content": "test",
+      "role": "user",
+      "name": "user"
+    },
+    {
+      "content": "",
+      "role": "user",
+      "name": "User"
+    },
+    {
+      "content": "Ja, wie kann ich Ihnen helfen?",
+      "role": "assistant",
+      "name": "Admin"
+    },
+    {
+      "content": "",
+      "role": "user",
+      "name": "User"
+    },
+    {
+      "content": "test2",
+      "role": "user",
+      "name": "user"
+    },
+    {
+      "content": "",
+      "role": "user",
+      "name": "User"
+    },
+    {
+      "content": "Ja, ich bin hier. Wie kann ich Ihnen weiterhelfen?",
+      "role": "assistant",
+      "name": "Admin"
+    },
+    {
+      "content": "",
+      "role": "user",
+      "name": "User"
+    },
+    {
+      "content": "Hallo aus Unreal!",
+      "role": "user",
+      "name": "user"
+    },
+    {
+      "content": "",
+      "role": "user",
+      "name": "User"
+    },
+    {
+      "content": "Hallo! Wie kann ich Ihnen aus der Unreal-Welt helfen?",
+      "role": "assistant",
+      "name": "Admin"
+    },
+    {
+      "content": "",
+      "role": "user",
+      "name": "User"
+    },
+    {
+      "content": "Hallo aus Unreal!",
+      "role": "user",
+      "name": "user"
+    },
+    {
+      "content": "",
+      "role": "user",
+      "name": "User"
+    }
+  ]
+}

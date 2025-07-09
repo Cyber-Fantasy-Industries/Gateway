@@ -1,0 +1,26 @@
+# 🧠 Kern
+Flask==2.3.3
+python-dotenv==1.0.1
+
+# 🖥️ UI & Formulare
+Flask-WTF==1.1.1
+WTForms==3.1.2
+
+# 🌐 Echtzeitkommunikation (z. B. Live-Konferenzen)
+Flask-SocketIO==5.3.4
+
+# 🧪 Logging & Debugging
+loguru==0.7.2
+
+# 📊 Visualisierung (optional)
+plotly==5.22.0
+
+
+# web-socket
+flask-sock
+flask_cors
+watchdog
+
+
+#flaml[automl]
+ag2[openai]

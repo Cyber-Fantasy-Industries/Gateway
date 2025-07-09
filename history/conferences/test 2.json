@@ -1,0 +1,8 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "Conference started"
+    }
+  ]
+}

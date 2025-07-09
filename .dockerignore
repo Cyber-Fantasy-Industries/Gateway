@@ -1,0 +1,39 @@
+ 
+# Umgebungsdateien
+.env
+*.env
+app.pyw
+wipe.py
+rebuild.py
+README.md
+
+utils/
+logs/ 
+# brauche einen zweiten für den container
+# Oder nur bestimmte Dateien: config/local_*
+# Python Bytecode / Cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtuelle Umgebungen
+venv/
+env/
+ENV/
+
+# IDE-Dateien
+.vs/
+.vscode/
+.idea/
+*.code-workspace
+
+# Systemdateien
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Sonstiges
+*.sqlite3

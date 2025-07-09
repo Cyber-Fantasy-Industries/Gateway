@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  workforce_manager:
+    build: .
+    image: workforce_manager
+    container_name: workforce_manager-container
+    command: python /app/backend/main.py
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./threads:/app/threads
+      - ./config:/app/config:ro
+      - ./history/conferences:/app/history/conferences
+    env_file:
+      - .env
+    restart: unless-stopped

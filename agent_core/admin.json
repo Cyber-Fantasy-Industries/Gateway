@@ -1,0 +1,27 @@
+{
+  "name": "Admin",
+  "system_message": "Du bist ein erfahrener Assistent.",
+  "description": "Operator im Raum.",
+  "human_input_mode": "TERMINATE",
+  "max_consecutive_auto_reply": 1,
+  "default_auto_reply": "Bitte präzisieren Sie Ihre Anfrage.",
+  "is_termination_msg": null,
+  "llm_config": {
+    "config_list": [
+      {
+        "api_key": "sk-proj-mnGo............",
+        "api_type": "openai",
+        "base_url": "https://api.openai.com/v1",
+        "model": "gpt-4"
+      }
+    ],
+    "temperature": 0.7,
+    "timeout": 60,
+    "max_tokens": 2048
+  },
+  "code_execution_config": {
+    "use_docker": true,
+    "timeout": 30,
+    "lang": "python"
+  }
+}

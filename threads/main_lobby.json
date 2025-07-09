@@ -1,0 +1,10 @@
+{
+  "room": "main_lobby",
+  "agents": [
+    "user",
+    "Admin"
+  ],
+  "status": "open",
+  "messages": [],
+  "resources": []
+}
