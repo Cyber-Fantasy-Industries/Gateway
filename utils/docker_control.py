@@ -7,8 +7,8 @@ import socket
 import tkinter as tk
 from utils.logger import log_to_gui
 
-IMAGE_NAME = "workforce_manager"
-CONTAINER_NAME = "workforce_manager-container"
+IMAGE_NAME = "gateway"
+CONTAINER_NAME = "gateway-container"
 PORT = "5000"
 creationflags = subprocess.CREATE_NO_WINDOW if os.name == "nt" else 0
 
@@ -43,7 +43,7 @@ def build_image(build_label, status_label, controls):
     def job():
         log_to_gui("🔨 Baue Docker-Image...")
         update_status(build_label, status_label, controls, building=True)
-        run_cmd_live("docker build -t workforce_manager .", log_to_gui)
+        run_cmd_live("docker build -t gateway .", log_to_gui)
         update_status(build_label, status_label, controls)
     return job
 
@@ -54,14 +54,14 @@ def rebuild_image(build_label, status_label, controls):
         run_cmd_live(f"docker rm -f {CONTAINER_NAME}", log_to_gui)
         run_cmd_live(f"docker rmi -f {IMAGE_NAME}", log_to_gui)
         log_to_gui("🔨 Baue Docker-Image...")
-        run_cmd_live("docker build -t workforce_manager .", log_to_gui)
+        run_cmd_live("docker build -t gateway .", log_to_gui)
         update_status(build_label, status_label, controls)
     return job
 
 def start_container(build_label, status_label, controls, log_error):
     def job():
         # Status abfragen
-        out, err = run_cmd("docker ps -a --filter name=workforce_manager-container --format '{{.Status}}'")
+        out, err = run_cmd("docker ps -a --filter name=gateway-container --format '{{.Status}}'")
         status = out.strip()
 
         if not status:
@@ -100,7 +100,7 @@ def restart_container(build_label, status_label, controls, log_error):
         update_status(build_label, status_label, controls, restarting=True)
 
         # Check, ob der Container überhaupt existiert
-        out, err = run_cmd("docker ps -a --filter name=workforce_manager-container --format '{{.Status}}'")
+        out, err = run_cmd("docker ps -a --filter name=gateway-container --format '{{.Status}}'")
         status = out.strip()
 
         if not status:
@@ -180,7 +180,7 @@ def open_ui():
     webbrowser.open(f"http://localhost:{PORT}")
 
 def image_exists():
-    result = subprocess.run("docker images -q workforce_manager", shell=True, capture_output=True, text=True)
+    result = subprocess.run("docker images -q gateway", shell=True, capture_output=True, text=True)
     return bool(result.stdout.strip())
 
 def container_exists():

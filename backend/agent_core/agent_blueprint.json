@@ -1,7 +1,7 @@
 {
   "name": "string",
   "description": "string",
-  "system_message": "string",
+  "system_message": "string", 
   "llm_config": {
     "model": "string",
     "temperature": "float",
@@ -14,3 +14,4 @@
     "lang": "string"
   }
 }
+

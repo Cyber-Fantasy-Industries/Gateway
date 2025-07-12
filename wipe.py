@@ -36,7 +36,7 @@ if all_ids:
 else:
     print("ℹ️ Keine Container zum Entfernen.")
 
-print("🗑 Suche alle Images mit REPOSITORY 'workforce_manager'...")
+print("🗑 Suche alle Images mit REPOSITORY 'gateway'...")
 result = subprocess.run(
     "docker images --format \"{{.Repository}} {{.ID}}\"",
     shell=True,
@@ -49,13 +49,13 @@ for line in result.stdout.strip().splitlines():
     parts = line.split()
     if len(parts) == 2:
         repo, img_id = parts
-        if repo == "workforce_manager":
+        if repo == "gateway":
             found = True
             print(f"🗑 Lösche Image {img_id}")
             run(f"docker rmi -f {img_id}", check=False)
 
 if not found:
-    print("ℹ️ Keine Images von 'workforce_manager' gefunden.")
+    print("ℹ️ Keine Images von 'gateway' gefunden.")
 
 print("🧽 Entferne ungenutzte Images und Build-Caches...")
 run("docker system prune -f", check=False)

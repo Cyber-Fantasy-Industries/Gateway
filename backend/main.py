@@ -1,77 +1,59 @@
 # main.py
-import sys, json
+from loguru import logger
 import os
-import time
-import traceback
-from flask import Flask
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+from backend.routes.agents import router as agents_router
+from backend.routes.conference import router as conference_router
+from backend.routes.settings import router as settings_router
+from backend.routes.websocket import router as websocket_router
+from backend.routes.system import router as system_router
+from backend.routes.websocket import start_watcher
+from backend.agent_core.core import initialize_lobby
+from backend.routes.router_devtools import router as devtools_router
+from backend.routes.websocket import router as websocket_router
+from contextlib import asynccontextmanager
 
-basedir = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    initialize_lobby()
+    start_watcher(path="backend/")
+    yield
+    # (Optional: Cleanup z.B. shutdown code)
 
-import os
-
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-STATIC_DIR = os.path.join(BASE_DIR, "..", "web_dashboard", "static")
-TEMPLATES_DIR = os.path.join(BASE_DIR, "..", "web_dashboard", "templates")
-
-app = Flask(
-    __name__,
-    static_folder=STATIC_DIR,
-    static_url_path="/static",
-    template_folder=TEMPLATES_DIR
+app = FastAPI(
+    lifespan=lifespan,
+    title="Gateway API",
+    description="Modulare KI-Agentenplattform mit Autogen und UE5-Integration",
+    version="0.1"
 )
 
-app.debug = True
+# 📂 Log-Verzeichnis sicherstellen
+LOG_PATH = "logs"
+os.makedirs(LOG_PATH, exist_ok=True)
+logger.add(os.path.join(LOG_PATH, "server.log"), rotation="500 KB", backtrace=True, diagnose=True)
+logger.info("🚀 Gateway API gestartet.")
 
-@app.route("/status")
-def status():
-    return "OK", 200
+# 🟢 CORS Middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
+# 📌 API-Routen registrieren
+app.include_router(agents_router)
+app.include_router(conference_router)
+app.include_router(settings_router)
+app.include_router(websocket_router)
+app.include_router(system_router)
+app.include_router(devtools_router)
+
+# 🔧 Uvicorn-Einstiegspunkt
 if __name__ == "__main__":
-
-    try:
-        print("✅ Initialisiere Anwendung...")
-
-        # Alle problematischen Imports hier drinnen!
-        sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
-        sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
-
-        from flask_cors import CORS
-        from web_dashboard.routes.index_routes import index_bp
-        from web_dashboard.routes.agents_routes import agents_bp
-        from web_dashboard.routes.log_routes import log_bp
-        from web_dashboard.routes.settings_routes import settings_bp
-        from web_dashboard.routes.ws_reload import sock as ws_sock
-        from web_dashboard.routes.conference_routes import conference_bp, initialize_lobby
-        import threading
-
-        CORS(app)
-        HISTORY_DIR = "/app/history/conferences"
-
-        # Routen registrieren
-        
-        #app.register_blueprint(agents_bp)
-        app.register_blueprint(log_bp)
-        app.register_blueprint(settings_bp)
-        app.register_blueprint(conference_bp)
-        app.register_blueprint(index_bp)
-        app.register_blueprint(agents_bp)
-        ws_sock.init_app(app)
-        
-        print("✅ Prüfe Lobby-History-Datei...")
-        lobby_history_path = os.path.join(HISTORY_DIR, "main_lobby.json")
-        if not os.path.exists(lobby_history_path):
-            with open(lobby_history_path, "w", encoding="utf-8") as f:
-                json.dump({"messages": []}, f, indent=2)
-        print("✅ Lobby-History-Datei OK.")
-        from web_dashboard.routes.ws_reload import start_watcher
-        threading.Thread(target=start_watcher, daemon=True).start()
-        initialize_lobby()
-        
-        app.run(host="0.0.0.0", port=5000, debug=True, use_reloader=False)
-        
-
-    except Exception as e:
-        print("❌ Fehler beim Initialisieren:")
-        traceback.print_exc()
-
-
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8080, reload=True)
+    start_watcher()
+    initialize_lobby()
