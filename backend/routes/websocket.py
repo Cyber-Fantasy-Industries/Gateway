@@ -1,10 +1,9 @@
 
 from fastapi import APIRouter, WebSocket, WebSocketDisconnect
 from loguru import logger
-import os
 from watchfiles import watch
 import threading
-from ws_utils import reload_clients, chat_clients, broadcast_reload, broadcast_chat_message, start_watcher
+from .ws_utils import reload_clients, chat_clients, broadcast_reload, broadcast_chat_message, start_watcher
 
 
 router = APIRouter()

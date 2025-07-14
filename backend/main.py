@@ -7,11 +7,10 @@ from backend.routes.agents import router as agents_router
 from backend.routes.conference import router as conference_router
 from backend.routes.settings import router as settings_router
 from backend.routes.websocket import router as websocket_router
+from backend.routes.docker import router as docker_router
 from backend.routes.system import router as system_router
 from backend.routes.websocket import start_watcher
 from backend.agent_core.core import initialize_lobby
-from backend.routes.router_devtools import router as devtools_router
-from backend.routes.websocket import router as websocket_router
 from contextlib import asynccontextmanager
 
 @asynccontextmanager
@@ -28,6 +27,7 @@ app = FastAPI(
     version="0.1"
 )
 
+  
 # 📂 Log-Verzeichnis sicherstellen
 LOG_PATH = "logs"
 os.makedirs(LOG_PATH, exist_ok=True)
@@ -49,11 +49,10 @@ app.include_router(conference_router)
 app.include_router(settings_router)
 app.include_router(websocket_router)
 app.include_router(system_router)
-app.include_router(devtools_router)
+app.include_router(docker_router)
+
 
 # 🔧 Uvicorn-Einstiegspunkt
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8080, reload=True)
-    start_watcher()
-    initialize_lobby()
+    uvicorn.run(app, host="0.0.0.0", port=8080, reload=False)

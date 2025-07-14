@@ -13,7 +13,7 @@ import threading
 
 def create_main_window():
     window = tk.Tk()
-    window.title("Workforce Manager – Docker Dev Control")
+    window.title("Gateway – Docker Dev Control")
     window.geometry("1400x700")
     return window
 

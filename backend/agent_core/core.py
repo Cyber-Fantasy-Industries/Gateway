@@ -1,13 +1,15 @@
 import os
 import json
 from backend.ag2.autogen import ConversableAgent, UserProxyAgent, Agent, GroupChat, GroupChatManager
-from backend.settings import HISTORY_DIR
 from utils.logger import logger
+
+HISTORY_DIR = os.path.join("history", "conferences")
 
 AGENT_PROFILE_DIR = "config"
 AGENTS_RUNTIME_DIR = "agents_config_list"
 THREADS_DIR = "threads"
 SYSTEM_PROFILES = {"user", "admin", "manager"}
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # 🧠 Agentenprofil laden (nur aus /config)
 def load_agent_profile(profile_name: str):
@@ -99,13 +101,22 @@ def build_manager_config():
     for entry in config.get("config_list", []):
         if entry.get("api_key") == "{{global}}":
             entry["api_key"] = os.getenv("OPENAI_API_KEY")
+        # DEBUG: Zeige alle Keys!
+        print("🔍 LLM-Konfigurationseintrag:", entry)
     return config
+
+
 
 
 # 🔁 Lobby-Manager erzeugen
 lobby_manager = None
-
+from dotenv import load_dotenv
+import os
 def initialize_lobby():
+    load_dotenv()
+    print("OPENAI_API_KEY:", os.getenv("OPENAI_API_KEY"))
+    print("OPENAI_PROJECT_ID:", os.getenv("OPENAI_PROJECT_ID"))
+    print("OPENAI_ORG_ID:", os.getenv("OPENAI_ORG_ID"))
     """
     🧠 Initialisiert oder lädt die zentrale Main-Lobby mit Admin und UserProxy.
     """
@@ -117,7 +128,7 @@ def initialize_lobby():
         user_proxy = build_user_proxy()
         admin_agent = build_admin()
 
-        history_path = os.path.join(HISTORY_DIR, "main_lobby.json")
+        history_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "history", "conferences", "main_lobby.json"))
         messages = [{"role": "system", "content": "Lobby gestartet"}]
 
         # ⏪ Falls Datei existiert: Verlauf einlesen
@@ -141,7 +152,29 @@ def initialize_lobby():
             human_input_mode="NEVER",
             system_message="Dies ist der zentrale Lobby-Manager."
         )
-
+        
+        # Test-Nachricht über den Manager (run_chat)
+        try:
+            # Übergebe ein dict-Array als Chatverlauf
+            result = lobby_manager.run_chat(
+            messages=[{"role": "user", "content": "Test"}]
+        )
+            logger.info(f"Testnachricht geschickt, Antwort: {result}")
+        except Exception as ex:
+            logger.warning(f"Konnte Testnachricht nicht schicken: {ex}")
+        try:
+            lobby_manager.run()
+        except Exception as ex:
+            logger.warning(f"Konnte run() nicht aufrufen: {ex}")
+        try:
+            result = lobby_manager.initiate_chat(
+                recipient=admin_agent,
+                message="Dies ist eine Testnachricht an den Admin.",
+                clear_history=False
+            )
+            logger.info(f"Testnachricht geschickt, Antwort: {result}")
+        except Exception as ex:
+            logger.warning(f"Konnte Testnachricht nicht schicken: {ex}")
         # 💾 Aktuellen Zustand abspeichern
         with open(history_path, "w", encoding="utf-8") as f:
             json.dump({"messages": group.messages}, f, indent=2)
@@ -162,3 +195,4 @@ def load_json(path):
 def save_json(path, data):
     with open(path, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2)
+

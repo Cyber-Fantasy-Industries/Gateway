@@ -1,0 +1,9 @@
+{
+
+    "python.defaultInterpreterPath": "C:\\Users\\aaron\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "python.analysis.diagnosticSeverityOverrides": {},
+    "python.analysis.extraPaths": [
+        "./backend"
+    ],
+    "python.analysis.typeCheckingMode": "basic"
+}

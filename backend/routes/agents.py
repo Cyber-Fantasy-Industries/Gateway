@@ -131,4 +131,4 @@ async def respond_agent(name: str, request: AgentMessage):
 
 
 # 🔧 Hilfsfunktion importieren (aus agent_core/core.py)
-from agent_core.core import load_agent_profile
+from backend.agent_core.core import load_agent_profile

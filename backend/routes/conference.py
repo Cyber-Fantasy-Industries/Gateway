@@ -1,144 +1,89 @@
-# backend/routes/conference.py
-from fastapi import APIRouter, HTTPException, status
+from fastapi import APIRouter, Request, HTTPException
+from fastapi.responses import JSONResponse
 from pydantic import BaseModel
-from typing import List, Optional
+from typing import Optional
+from pathlib import Path
 import os, json
-from backend.agent_core.core import build_agent, build_user_proxy, build_admin, build_manager_config, initialize_lobby
+
+from backend.agent_core.core import build_user_proxy, build_admin, build_manager_config
 from backend.ag2.autogen import GroupChat, GroupChatManager
-from loguru import logger
 
-router = APIRouter(prefix="/api/conference", tags=["Conference"])
+router = APIRouter()
 
-HISTORY_DIR = "/app/history/conferences"
-os.makedirs(HISTORY_DIR, exist_ok=True)
+HISTORY_DIR = Path("backend/history/conferences")
+HISTORY_DIR.mkdir(parents=True, exist_ok=True)
 
-# 📋 Request Models
-class ConferenceStartRequest(BaseModel):
+conference_managers: dict[str, GroupChatManager] = {}
+
+# 🏡 Models
+class ConferenceMessage(BaseModel):
     room: str
-
-class MessageRequest(BaseModel):
     message: str
 
-# 📋 Response Models
-class BasicResponse(BaseModel):
-    success: bool
-    message: Optional[str] = None
+# 🧠 Helferfunktionen
+def get_history_path(room: str) -> Path:
+    return HISTORY_DIR / f"{room}.json"
 
-class ConferenceHistory(BaseModel):
-    success: bool
-    history: List[dict]
+def load_conference_history(room: str) -> list:
+    path = get_history_path(room)
+    if path.exists():
+        with open(path, "r", encoding="utf-8") as f:
+            return json.load(f).get("messages", [])
+    return []
 
-class ConferenceList(BaseModel):
-    success: bool
-    rooms: List[str]
+def save_conference_history(room: str, messages: list):
+    path = get_history_path(room)
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump({"messages": messages}, f, indent=2)
 
-# 🚀 Konferenz starten
-@router.post("/start", response_model=BasicResponse)
-async def start_conference(request: ConferenceStartRequest):
-    try:
-        user_proxy = build_user_proxy()
-        admin_agent = build_admin()
+def get_conference_manager(room: str) -> Optional[GroupChatManager]:
+    return conference_managers.get(room)
 
-        group = GroupChat(
-            agents=[user_proxy, admin_agent],
-            messages=[{"role": "system", "content": "Conference started"}],
-            max_round=10,
-            speaker_selection_method="round_robin"
-        )
+# 🔄 Konferenz starten
+@router.post("/api/conference/start")
+def start_conference(request: Request):
+    data = request.query_params or request.json()
+    room = data.get("room", "debug-conf")
 
-        manager = GroupChatManager(
-            groupchat=group,
-            name="Manager",
-            llm_config=build_manager_config()
-        )
+    if room in conference_managers:
+        return {"success": False, "message": f"Konferenz '{room}' bereits gestartet."}
 
-        history_path = os.path.join(HISTORY_DIR, f"{request.room}.json")
-        with open(history_path, "w", encoding="utf-8") as f:
-            json.dump({"messages": group.messages}, f, indent=2)
+    user_proxy = build_user_proxy()
+    admin = build_admin()
+    messages = load_conference_history(room) or [{"role": "system", "content": "Conference started"}]
 
-        logger.info(f"📢 Konferenz '{request.room}' erfolgreich gestartet.")
-        return {"success": True, "message": f"Konferenz '{request.room}' gestartet."}
-    except Exception as e:
-        logger.exception("❌ Fehler beim Starten der Konferenz")
-        raise HTTPException(status_code=500, detail=str(e))
+    group = GroupChat(agents=[user_proxy, admin], messages=messages, max_round=10)
+    manager = GroupChatManager(
+        groupchat=group,
+        name=f"{room}_manager",
+        llm_config=build_manager_config(),
+        human_input_mode="NEVER",
+        system_message=f"Dies ist der Gruppenmanager für Raum {room}."
+    )
 
-# 💬 Nachricht in Lobby senden
-@router.post("/lobby/say", response_model=BasicResponse)
-async def say_to_lobby(request: MessageRequest):
-    try:
-        lobby_manager = initialize_lobby()
-        response = lobby_manager.run(
-            message={"role": "user", "content": request.message},
-            max_turns=1,
-            clear_history=False
-        )
+    conference_managers[room] = manager
+    save_conference_history(room, group.messages)
+    return {"success": True, "message": f"Konferenz '{room}' gestartet."}
 
-        messages = lobby_manager.groupchat.messages
-        assistant_msg = next(
-            (m["content"] for m in reversed(messages) if m.get("role") == "assistant"),
-            "Keine Antwort"
-        )
+# 🔣 Nachricht an Konferenz
+@router.post("/api/conference/say")
+def say_to_conference(msg: ConferenceMessage):
+    manager = get_conference_manager(msg.room)
+    if not manager:
+        raise HTTPException(status_code=404, detail="Konferenz nicht gefunden.")
 
-        with open("/app/history/conferences/main_lobby.json", "w", encoding="utf-8") as f:
-            json.dump({"messages": messages}, f, indent=2)
-
-        logger.info(f"💬 Lobby-Antwort: {assistant_msg[:100]}")
-        return {"success": True, "message": assistant_msg}
-    except Exception as e:
-        logger.exception("❌ Fehler beim Lobby-Dialog")
-        raise HTTPException(status_code=500, detail=str(e))
-
-
-# 📜 Lobby-Inhalt abrufen
-@router.get("/lobby", response_model=dict)
-async def get_lobby():
-    try:
-        lobby_path = "/app/threads/main_lobby.json"
-        if not os.path.exists(lobby_path):
-            raise HTTPException(status_code=404, detail="Lobby nicht gefunden.")
-        with open(lobby_path, "r", encoding="utf-8") as f:
-            lobby = json.load(f)
-        return {"success": True, "lobby": lobby}
-    except Exception as e:
-        logger.exception("❌ Fehler beim Laden der Lobby")
-        raise HTTPException(status_code=500, detail=str(e))
-
+    reply = manager.run_chat(msg.message)
+    save_conference_history(msg.room, manager.groupchat.messages)
+    return {"success": True, "reply": reply}
 
 # 📜 Verlauf abrufen
-@router.get("/history", response_model=dict)
-async def get_conference_history():
-    try:
-        history_path = "/app/history/conferences/main_lobby.json"
-        if not os.path.exists(history_path):
-            logger.warning("📁 Kein Verlauf für Lobby gefunden.")
-            raise HTTPException(status_code=404, detail="Kein Konferenzverlauf vorhanden.")
+@router.get("/api/conference/history")
+def get_conference_history(room: str):
+    history = load_conference_history(room)
+    return {"success": True, "history": history}
 
-        with open(history_path, "r", encoding="utf-8") as f:
-            history = json.load(f)
-
-        logger.info("📜 Konferenzverlauf erfolgreich geladen.")
-        return {"success": True, "history": history}
-    except Exception as e:
-        logger.exception("❌ Fehler beim Laden des Konferenzverlaufs")
-        raise HTTPException(status_code=500, detail=str(e))
-
-
-# 📜 Verfügbare Konferenzen
-@router.get("/list", response_model=dict)
-async def list_conferences():
-    try:
-        if not os.path.exists(HISTORY_DIR):
-            logger.warning("📂 Verzeichnis für Konferenzverläufe nicht gefunden.")
-            raise HTTPException(status_code=404, detail="Kein Konferenzverzeichnis vorhanden.")
-
-        files = [
-            f.replace(".json", "") for f in os.listdir(HISTORY_DIR)
-            if f.endswith(".json")
-        ]
-
-        logger.info(f"📋 Verfügbare Konferenzen: {files}")
-        return {"success": True, "conferences": files}
-    except Exception as e:
-        logger.exception("❌ Fehler beim Auflisten der Konferenzen")
-        raise HTTPException(status_code=500, detail=str(e))
-
+# 📋 Alle Konferenzen listen
+@router.get("/api/conference/list")
+def list_conferences():
+    rooms = [p.stem for p in HISTORY_DIR.glob("*.json")]
+    return {"success": True, "rooms": rooms}
