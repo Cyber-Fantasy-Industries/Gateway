@@ -19,10 +19,11 @@ def say_to_lobby(request: MessageRequest):
     try:
         manager = get_lobby_manager()
         user_msg = {
-            "role": "user",
+            "role": "user",    # Muss da bleiben!
             "name": "user",
             "content": request.message
         }
+
         user_agent = next(a for a in manager.groupchat.agents if a.name.lower() == "user")
         # Die History enthält beim Lobby-Bau bereits die System-Nachricht.
         # Wir hängen keine weitere System-Nachricht mehr an!
@@ -31,6 +32,12 @@ def say_to_lobby(request: MessageRequest):
 
         # AG2-Style: Events programmatisch verarbeiten (kein .process() im API-Kontext!)
         response = manager.run(n_round=1, user_input=False)
+        print("--- Verlauf nach .run() ---")
+        for msg in manager.groupchat.messages:
+            print(msg)
+        print("--- Agentenliste ---")
+        for a in manager.groupchat.agents:
+            print(a.name, type(a))
         # Fange alle Eingabe-Events ab
         for event in getattr(response, 'events', []):
             if getattr(event, "type", None) == "input_request":
@@ -39,17 +46,18 @@ def say_to_lobby(request: MessageRequest):
                     event.content.respond("exit")
                 continue
             # Sonstige Events: Optional loggen/auswerten
-
-        print("⚠️ manager.run durchgelaufen")
-        print("🛑 Nach run: messages =", manager.groupchat.messages)
-
         # Finde letzte Admin-Antwort
         messages = manager.groupchat.messages
-        admin_reply = next(
-            (m["content"] for m in reversed(messages)
-             if m.get("role") == "assistant" and m.get("name", "").lower() == "admin"),
-            None
-        )
+        for m in reversed(messages):
+            if m.get("name", "").lower() == "admin":
+                print("Admin-Nachricht gefunden:", m)
+                if m.get("role") != "assistant":
+                    print("WARNUNG: Admin-Role ist nicht 'assistant' sondern:", m.get("role"))
+                admin_reply = m["content"]
+                break
+        else:
+            admin_reply = None
+
         sync_lobby_manager_to_json()
         print("🟢 Aktuelle Nachrichten:", manager.groupchat.messages)
         logger.info(f"🟢 Aktuelle Nachrichten: {manager.groupchat.messages}")
@@ -57,6 +65,8 @@ def say_to_lobby(request: MessageRequest):
             "success": True,
             "reply": admin_reply
         }
+
+
     except Exception as e:
         import traceback
         print("❌ EXCEPTION:\n", traceback.format_exc())
@@ -67,15 +77,15 @@ def say_to_lobby(request: MessageRequest):
 def status():
     return {"status": "OK"}
 
-@router.post("/rebuild")
-def rebuild_system():
-    initialize_lobby()
-    return {"success": True, "message": "System wurde neu initialisiert."}
+# @router.post("/rebuild")
+# def rebuild_system():
+#     initialize_lobby()
+#     return {"success": True, "message": "System wurde neu initialisiert."}
 
-@router.get("/lobby")
-def lobby_info():
-    return get_lobby()
+# @router.get("/lobby")
+# def lobby_info():
+#     return get_lobby()
 
-@router.get("/lobby/history")
-def lobby_history():
-    return {"messages": get_lobby_history()}
+# @router.get("/lobby/history")
+# def lobby_history():
+#     return {"messages": get_lobby_history()}

@@ -6,6 +6,8 @@ import os
 import json
 import logging
 from loguru import logger
+# 🔧 Hilfsfunktion importieren (aus agent_core/core.py)
+from backend.agent_core.core import load_agent_profile
 
 router = APIRouter(prefix="/api/agents", tags=["Agents"])
 
@@ -128,7 +130,3 @@ async def respond_agent(name: str, request: AgentMessage):
     except Exception as e:
         logger.exception(f"❌ Fehler bei Agentenantwort von '{name}'")
         raise HTTPException(status_code=500, detail=str(e))
-
-
-# 🔧 Hilfsfunktion importieren (aus agent_core/core.py)
-from backend.agent_core.core import load_agent_profile
