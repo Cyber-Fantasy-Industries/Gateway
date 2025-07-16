@@ -3,7 +3,7 @@
   "agents": ["user", "Admin"],
   "status": "open",
   "messages": [
-    { "role": "system", "content": "Lobby gestartet", "name": "system" }
+    {"role": "system", "content": "Lobby gestartet", "name": "system"}
   ],
   "resources": []
 }

@@ -225,3 +225,417 @@
 2025-07-13 23:53:46.985 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
 2025-07-13 23:53:47.625 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
 2025-07-13 23:53:47.625 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 00:10:39.399 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 00:10:39.961 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 00:10:39.961 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 00:22:48.731 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/agent_core/core.py')}
+2025-07-14 00:22:52.092 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 00:22:52.769 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 00:22:52.770 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 00:26:54.664 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/agent_core/core.py')}
+2025-07-14 00:26:58.066 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 00:26:58.617 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 00:26:58.617 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 00:32:40.477 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/agent_core/core.py')}
+2025-07-14 00:32:42.674 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 00:32:43.569 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 00:32:43.569 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 00:37:09.429 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 00:37:09.947 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 00:37:09.948 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 00:44:13.365 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 00:44:13.952 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 00:44:13.952 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 00:44:31.974 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 00:44:32.484 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 00:44:32.484 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 00:59:39.960 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 00:59:41.022 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 00:59:41.022 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 01:02:56.527 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 01:02:59.684 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 01:02:59.684 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 01:25:53.512 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 01:25:55.221 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 01:25:55.221 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 01:25:59.415 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 01:26:02.061 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 01:26:02.061 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 01:26:06.301 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 01:26:08.784 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 01:26:08.785 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 01:26:12.832 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 01:26:15.211 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 01:26:15.212 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 01:27:27.311 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 01:27:28.797 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 01:27:28.798 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 01:29:18.476 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/history/conferences/main_lobby.json')}
+2025-07-14 01:50:28.196 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 01:50:28.373 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 01:50:28.373 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 02:00:29.426 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 02:00:29.603 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 02:00:29.604 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 02:00:39.982 | INFO     | __main__:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 02:00:40.155 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 02:00:40.156 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 02:00:42.277 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/history/conferences/main_lobby.json')}
+2025-07-14 02:05:58.870 | INFO     | backend.routes.system:say_to_lobby:38 - 💬 Lobby-Antwort: Keine Antwort
+2025-07-14 02:09:24.164 | INFO     | backend.routes.system:say_to_lobby:38 - 💬 Lobby-Antwort: Keine Antwort
+2025-07-14 02:09:32.736 | INFO     | backend.routes.system:say_to_lobby:38 - 💬 Lobby-Antwort: Keine Antwort
+2025-07-14 02:10:26.657 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.deleted: 3>, 'backend/history/conferences/main_lobby.log'), (<Change.modified: 2>, 'backend/history/conferences')}
+2025-07-14 02:10:28.710 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.deleted: 3>, 'backend/history/conferences/test 2.json'), (<Change.modified: 2>, 'backend/history/conferences')}
+2025-07-14 02:10:30.713 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.deleted: 3>, 'backend/history/conferences/test.json'), (<Change.modified: 2>, 'backend/history/conferences')}
+2025-07-14 10:45:42.530 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/threads/main_lobby.json')}
+2025-07-14 11:02:41.232 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/routes/system.py')}
+2025-07-14 11:02:45.639 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 11:02:45.820 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 11:02:45.820 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 11:04:17.541 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 11:04:17.700 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 11:04:17.700 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 11:17:14.224 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/agent_core/core.py')}
+2025-07-14 11:17:17.287 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 11:17:17.438 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 11:17:17.438 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 11:19:07.692 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 11:19:07.845 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 11:19:07.846 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 11:21:36.584 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 11:21:36.734 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 11:21:36.735 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 11:27:35.837 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 11:27:35.990 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 11:27:35.990 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 11:29:00.322 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 11:29:00.495 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 11:29:00.496 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 11:42:32.559 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 11:42:32.716 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 11:42:32.716 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 11:42:37.587 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 11:42:37.741 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 11:42:37.742 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 11:48:52.350 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 11:48:52.503 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 11:48:52.503 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 11:50:12.309 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 11:50:12.475 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 11:50:12.475 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 11:58:40.375 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 11:58:40.537 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 11:58:40.537 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 12:04:43.911 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/routes/system.py')}
+2025-07-14 12:04:47.096 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 12:04:47.252 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 12:04:47.252 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 12:07:33.574 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 12:07:33.724 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 12:07:33.725 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 12:17:20.620 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 12:17:20.785 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 12:17:20.785 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 12:24:15.562 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/history/conferences/main_lobby.json')}
+2025-07-14 12:51:05.384 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 12:51:05.550 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 12:51:05.550 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 12:58:45.064 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 12:58:45.234 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 12:58:45.234 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 13:08:14.894 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/agent_core/core.py')}
+2025-07-14 13:08:18.257 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 13:08:18.415 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 13:08:18.416 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 13:09:30.954 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 13:09:31.112 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 13:09:31.112 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 13:12:08.752 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 13:12:08.903 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 13:12:08.903 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 13:14:50.127 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 13:14:50.297 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 13:14:50.298 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 13:20:10.079 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 13:20:10.242 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 13:20:10.242 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 13:28:04.915 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 13:30:55.797 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 13:40:53.248 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 13:40:53.432 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 13:40:53.432 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 13:43:05.621 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 13:43:05.788 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 13:43:05.788 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 13:49:32.096 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/agent_core/core.py')}
+2025-07-14 13:49:35.022 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 13:49:35.192 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 13:49:35.192 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 13:58:25.185 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 13:58:25.356 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 13:58:25.356 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 14:26:56.337 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/routes/system.py')}
+2025-07-14 14:27:00.192 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 14:27:00.367 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 14:27:00.367 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 14:29:13.717 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 14:29:13.876 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 14:29:13.876 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 14:40:08.291 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/agent_core/core.py')}
+2025-07-14 14:43:57.162 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 14:49:17.430 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 14:49:17.600 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 14:49:17.600 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 15:16:02.695 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/agent_core/core.py')}
+2025-07-14 15:16:05.742 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 15:16:05.908 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 15:16:05.908 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 15:19:59.132 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 15:19:59.291 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 15:19:59.291 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 15:20:15.880 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/backend/history/conferences/main_lobby.json')}
+2025-07-14 15:23:46.115 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.deleted: 3>, 'backend/history/conferences/main_lobby.json'), (<Change.modified: 2>, 'backend/history/conferences')}
+2025-07-14 15:26:47.713 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/routes/system.py')}
+2025-07-14 15:26:50.402 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 15:26:50.564 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 15:26:50.565 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 15:28:57.158 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 15:28:57.318 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 15:28:57.318 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 15:40:52.609 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 15:40:52.780 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 15:40:52.781 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 15:41:25.179 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 15:41:25.345 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 15:41:25.346 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 15:45:54.074 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.deleted: 3>, 'backend/agent_core/history/conferences'), (<Change.deleted: 3>, 'backend/agent_core/history'), (<Change.modified: 2>, 'backend/agent_core'), (<Change.deleted: 3>, 'backend/agent_core/history/conferences/main_lobby.json')}
+2025-07-14 15:46:04.337 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.deleted: 3>, 'backend/backend/history'), (<Change.deleted: 3>, 'backend/backend/history/conferences'), (<Change.deleted: 3>, 'backend/backend/history/conferences/main_lobby.json'), (<Change.deleted: 3>, 'backend/backend')}
+2025-07-14 15:46:04.638 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/')}
+2025-07-14 15:48:48.923 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 15:48:49.090 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 15:48:49.091 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 15:51:19.277 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/agent_core/history/conferences/main_lobby.json')}
+2025-07-14 15:54:22.785 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.deleted: 3>, 'backend/agent_core/history/conferences/main_lobby.json'), (<Change.deleted: 3>, 'backend/agent_core/history/conferences'), (<Change.deleted: 3>, 'backend/agent_core/history'), (<Change.modified: 2>, 'backend/agent_core')}
+2025-07-14 15:57:54.713 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 15:57:54.878 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 15:57:54.878 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 15:59:17.518 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/agent_core/history/conferences/main_lobby.json')}
+2025-07-14 16:02:05.287 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/agent_core/core.py')}
+2025-07-14 16:02:09.926 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 16:02:10.083 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 16:02:10.083 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 16:07:52.417 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 16:07:52.570 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 16:07:52.570 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 16:08:36.035 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/history/conferences/main_lobby.json')}
+2025-07-14 16:18:39.110 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/history/conferences/main_lobby.json')}
+2025-07-14 16:22:46.390 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 16:22:46.564 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 16:22:46.564 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 16:23:54.549 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 16:23:54.714 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 16:23:54.714 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 16:28:25.274 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 16:28:25.431 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 16:28:25.431 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 16:30:33.670 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 16:30:33.834 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 16:30:33.834 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 16:33:54.414 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 16:33:54.570 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 16:33:54.570 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 16:34:54.019 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/routes/system.py')}
+2025-07-14 16:34:56.532 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 16:34:56.686 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 16:34:56.686 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 16:37:02.219 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/routes/system.py')}
+2025-07-14 16:37:05.762 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 16:37:05.928 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 16:37:05.928 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 16:37:12.550 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/history/conferences/main_lobby.json')}
+2025-07-14 16:48:00.532 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/routes/system.py')}
+2025-07-14 16:48:04.768 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 16:48:04.964 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 16:48:04.964 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 16:48:23.427 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/history/conferences/main_lobby.json')}
+2025-07-14 16:57:57.321 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/agent_core/core.py')}
+2025-07-14 17:16:38.604 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 17:16:38.754 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 17:16:38.754 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 17:16:56.266 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/agent_core/core.py')}
+2025-07-14 17:16:58.952 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 17:16:59.114 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 17:16:59.114 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 17:17:44.958 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/history/conferences/main_lobby.json')}
+2025-07-14 17:18:14.488 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/history/conferences/main_lobby.json')}
+2025-07-14 17:21:14.029 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/routes/system.py')}
+2025-07-14 17:21:18.408 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 17:21:18.566 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 17:21:18.566 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 17:21:24.048 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/history/conferences/main_lobby.json')}
+2025-07-14 17:24:26.146 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 17:24:26.296 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 17:24:26.296 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 17:27:14.608 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/routes/system.py')}
+2025-07-14 17:27:18.655 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 17:27:18.817 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 17:27:18.817 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 17:30:04.883 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 17:30:05.039 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 17:30:05.039 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 17:30:11.808 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/history/conferences/main_lobby.json')}
+2025-07-14 17:34:30.169 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/history/conferences/main_lobby.json')}
+2025-07-14 17:38:47.097 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/agent_core/core.py')}
+2025-07-14 17:38:50.861 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 17:38:51.035 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 17:38:51.036 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 17:39:16.702 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 17:39:16.849 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 17:39:16.850 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 17:41:39.214 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 17:41:39.366 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 17:41:39.366 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 17:45:32.139 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/agent_core/core.py')}
+2025-07-14 17:45:34.662 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 17:45:34.814 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 17:45:34.814 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 17:47:56.437 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/agent_core/core.py')}
+2025-07-14 17:47:59.663 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 17:47:59.814 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 17:47:59.814 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 17:50:16.198 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/history/conferences/main_lobby.json')}
+2025-07-14 17:57:30.638 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/main.py')}
+2025-07-14 17:57:32.968 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 17:57:33.119 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 17:57:33.119 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 18:03:09.499 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 18:03:09.647 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 18:03:09.648 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 18:09:51.566 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/history/conferences/main_lobby.json')}
+2025-07-14 18:19:42.102 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 18:19:42.261 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 18:19:42.261 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 18:21:27.888 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/routes/system.py')}
+2025-07-14 18:21:31.118 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 18:21:31.269 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 18:21:31.269 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 18:21:52.205 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/history/conferences/main_lobby.json')}
+2025-07-14 18:24:13.448 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 18:24:13.611 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 18:24:13.611 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 18:25:25.252 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/history/conferences/main_lobby.json')}
+2025-07-14 19:00:22.570 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 19:00:22.721 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 19:00:22.721 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 19:01:58.466 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.deleted: 3>, 'backend/history/conferences/main_lobby.json'), (<Change.modified: 2>, 'backend/history/conferences')}
+2025-07-14 19:02:04.476 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.added: 1>, 'backend/history/conferences/main_lobby.json'), (<Change.modified: 2>, 'backend/history/conferences')}
+2025-07-14 19:20:33.773 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/history/conferences/main_lobby.json')}
+2025-07-14 19:23:36.378 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 19:23:36.539 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 19:23:36.539 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 19:27:21.429 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.deleted: 3>, 'backend/history/conferences/main_lobby.json'), (<Change.modified: 2>, 'backend/history/conferences')}
+2025-07-14 19:30:17.466 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 19:30:17.624 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 19:30:17.624 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 19:30:25.571 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.deleted: 3>, 'backend/history/conferences/main_lobby.json'), (<Change.modified: 2>, 'backend/history/conferences')}
+2025-07-14 19:30:29.578 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.added: 1>, 'backend/history/conferences/main_lobby.json'), (<Change.modified: 2>, 'backend/history/conferences')}
+2025-07-14 19:34:25.346 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 19:34:25.505 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 19:34:25.505 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 19:34:36.789 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/history/conferences/main_lobby.json')}
+2025-07-14 19:40:37.222 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/routes/system.py')}
+2025-07-14 19:40:39.607 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 19:40:39.773 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 19:40:39.773 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 19:40:45.183 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/history/conferences/main_lobby.json')}
+2025-07-14 22:57:15.326 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/routes/system.py')}
+2025-07-14 22:57:18.903 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 22:57:19.067 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 22:57:19.068 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 22:59:58.700 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 22:59:58.844 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 22:59:58.844 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 23:10:51.371 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/routes/system.py')}
+2025-07-14 23:10:54.925 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 23:10:55.088 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 23:10:55.089 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 23:13:54.986 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 23:13:55.134 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 23:13:55.134 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 23:40:50.781 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 23:40:50.938 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 23:40:50.938 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 23:50:11.503 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 23:50:11.649 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 23:50:11.649 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-14 23:53:48.430 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/routes/system.py')}
+2025-07-14 23:53:50.636 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-14 23:53:50.781 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-14 23:53:50.781 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-15 13:51:47.098 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-15 13:51:47.247 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-15 13:51:47.247 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-15 13:52:35.038 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/history/conferences/main_lobby.json')}
+2025-07-15 14:06:24.254 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/history/conferences/main_lobby.json')}
+2025-07-15 14:09:31.977 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-15 14:09:32.136 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-15 14:09:32.136 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-15 16:08:25.151 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/history/conferences/main_lobby.json')}
+2025-07-16 04:51:40.222 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-16 04:51:40.384 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-16 04:51:40.385 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-16 06:49:29.568 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-16 06:49:29.742 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-16 06:49:29.742 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-16 07:15:31.432 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-16 07:15:31.593 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-16 07:15:31.593 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-16 07:20:31.005 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-16 07:20:31.161 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-16 07:20:31.161 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-16 07:23:44.815 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-16 07:23:44.971 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-16 07:23:44.971 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-16 07:24:22.558 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-16 07:24:22.715 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-16 07:24:22.715 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-16 07:34:13.019 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-16 07:34:13.172 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-16 07:34:13.172 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-16 07:44:39.662 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-16 07:44:39.821 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-16 07:44:39.821 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-16 08:07:30.448 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-16 08:07:30.607 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-16 08:07:30.607 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-16 08:08:05.231 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-16 08:08:05.382 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-16 08:08:05.382 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-16 08:15:38.573 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-16 08:15:38.724 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-16 08:15:38.724 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-16 08:18:07.693 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-16 08:18:07.852 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-16 08:18:07.852 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-16 08:21:53.198 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-16 08:21:53.356 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-16 08:21:53.356 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-16 08:24:25.658 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-16 08:24:25.827 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-16 08:24:25.827 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-16 08:26:39.245 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-16 08:26:39.411 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-16 08:26:39.412 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-16 08:28:04.412 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-16 08:28:04.571 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-16 08:28:04.571 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-16 08:32:22.674 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-16 08:32:22.828 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-16 08:32:22.828 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-16 09:05:53.204 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.deleted: 3>, 'backend/agent_core/history/conferences/main_lobby.json'), (<Change.deleted: 3>, 'backend/agent_core/history/conferences'), (<Change.modified: 2>, 'backend/agent_core'), (<Change.deleted: 3>, 'backend/agent_core/history')}
+2025-07-16 09:22:18.729 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-16 09:22:18.892 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-16 09:22:18.892 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-16 10:26:25.043 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/history/conferences/main_lobby.json')}
+2025-07-16 10:27:24.280 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/history/conferences/main_lobby.json')}
+2025-07-16 10:28:15.037 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/history/conferences/main_lobby.json')}

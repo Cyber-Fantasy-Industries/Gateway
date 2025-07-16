@@ -1,3 +1,26 @@
 {
-  "messages": []
+  "room": "main_lobby",
+  "agents": [
+    "user",
+    "Admin"
+  ],
+  "status": "open",
+  "messages": [
+    {
+      "content": "exit",
+      "role": "user",
+      "name": "user"
+    },
+    {
+      "content": "Ich leite deine Nachricht weiter.",
+      "role": "user",
+      "name": "User"
+    },
+    {
+      "content": "Best\u00e4tigt. Deine Nachricht wurde weitergeleitet. Gibt es sonst noch etwas, wobei ich unterst\u00fctzen kann?",
+      "role": "user",
+      "name": "Admin"
+    }
+  ],
+  "resources": []
 }

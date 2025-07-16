@@ -3,18 +3,13 @@
 Gateway/
 ├── .dockerignore
 ├── .env
-├── app.pyw                 # (deprecated)
 ├── docker-compose.yml
 ├── Dockerfile
 ├── LICENSE
-├── quick_setup_gateway.py
 ├── README.md
-├── rebuild.py
 ├── requirements.txt
-├── run_gateway.bat
-├── wipe.py
+├── run.py
 ├── .git/
-├── .vs/
 ├── .vscode/
 ├── backend/
 │   ├── main.py
@@ -23,16 +18,20 @@ Gateway/
 │   ├── agent_core/
 │   │   ├── __init__.py
 │   │   ├── agent_blueprint.json
-│   │   ├── agent_factory/
+│   │   ├── agent_factory.py (not in use yet)
 │   │   ├── core.py
 │   │   ├── core_agents.json
-│   │   ├── file_tools.py
-│   │   └── manager_factory.py
+│   │   ├── file_tools.py (not in use yet)
+│   │   └── manager_factory.py (not in use yet)
 │   ├── agent_config_list/
 │   ├── history/
+│       ├── __init__.py
 │   │   ├── chats/
 │   │   └── conferences/
+│           ├── __init__.py
+│           ├── main_lobby.py
 │   ├── threads/
+│       ├── __init__.py
 │   │   └── main_lobby.json
 │   |   └── {project_name}.json
 │   └── routes/
@@ -48,13 +47,11 @@ Gateway/
 │   ├── default.json
 │   ├── llm_config.json
 │   ├── manager.json
+│   ├── lobby_init.json
 │   └── user.json
 ├── docs/
 ├── logs/
 │   ├── watchdog
 │   ├── server
-│   ├── docker
-│   └── gateway.log
 ├── utils/
-│   ├── docker_control.py
 │   └── logger.py

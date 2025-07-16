@@ -10,8 +10,8 @@ from backend.ag2.autogen import GroupChat, GroupChatManager
 
 router = APIRouter()
 
-HISTORY_DIR = Path("backend/history/conferences")
-HISTORY_DIR.mkdir(parents=True, exist_ok=True)
+HISTORY_PATH = Path(__file__).resolve().parent / ".." / "history" / "conferences" / "main_lobby.json"
+HISTORY_DIR = HISTORY_PATH.resolve()
 
 conference_managers: dict[str, GroupChatManager] = {}
 

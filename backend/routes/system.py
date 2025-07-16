@@ -1,14 +1,67 @@
-# system.py
-from fastapi import APIRouter, HTTPException, Body
-from backend.agent_core.core import initialize_lobby
+# AG2 API-Handler und Lobby-Logik: Clean Refactoring
+
+from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
-import os, json
-from loguru import logger
-from fastapi.responses import JSONResponse
+import logging
+from backend.agent_core.core import (
+    get_lobby_manager, sync_lobby_manager_to_json,
+    initialize_lobby, get_lobby, get_lobby_history
+)
+
+logger = logging.getLogger(__name__)
 router = APIRouter(prefix="/api/system", tags=["System"])
 
 class MessageRequest(BaseModel):
     message: str
+
+@router.post("/lobby/say")
+def say_to_lobby(request: MessageRequest):
+    try:
+        manager = get_lobby_manager()
+        user_msg = {
+            "role": "user",
+            "name": "user",
+            "content": request.message
+        }
+        user_agent = next(a for a in manager.groupchat.agents if a.name.lower() == "user")
+        # Die History enthält beim Lobby-Bau bereits die System-Nachricht.
+        # Wir hängen keine weitere System-Nachricht mehr an!
+        manager.groupchat.append(user_msg, user_agent)
+        print("🚩 Nach Append: Aktuelle Nachrichten:", manager.groupchat.messages)
+
+        # AG2-Style: Events programmatisch verarbeiten (kein .process() im API-Kontext!)
+        response = manager.run(n_round=1, user_input=False)
+        # Fange alle Eingabe-Events ab
+        for event in getattr(response, 'events', []):
+            if getattr(event, "type", None) == "input_request":
+                # Beende oder antworte automatisch, z.B. "exit" oder "yes"
+                if hasattr(event.content, "respond"):
+                    event.content.respond("exit")
+                continue
+            # Sonstige Events: Optional loggen/auswerten
+
+        print("⚠️ manager.run durchgelaufen")
+        print("🛑 Nach run: messages =", manager.groupchat.messages)
+
+        # Finde letzte Admin-Antwort
+        messages = manager.groupchat.messages
+        admin_reply = next(
+            (m["content"] for m in reversed(messages)
+             if m.get("role") == "assistant" and m.get("name", "").lower() == "admin"),
+            None
+        )
+        sync_lobby_manager_to_json()
+        print("🟢 Aktuelle Nachrichten:", manager.groupchat.messages)
+        logger.info(f"🟢 Aktuelle Nachrichten: {manager.groupchat.messages}")
+        return {
+            "success": True,
+            "reply": admin_reply
+        }
+    except Exception as e:
+        import traceback
+        print("❌ EXCEPTION:\n", traceback.format_exc())
+        logger.exception("Fehler in /lobby/say")
+        raise HTTPException(status_code=500, detail="Interner Serverfehler")
 
 @router.get("/status")
 def status():
@@ -19,49 +72,10 @@ def rebuild_system():
     initialize_lobby()
     return {"success": True, "message": "System wurde neu initialisiert."}
 
-@router.post("/lobby/say")
-def say_to_lobby(request: MessageRequest):
-    try:
-        lobby_manager = initialize_lobby()
-        response = lobby_manager.run(
-            message={"role": "user", "content": request.message},
-            max_turns=1,
-            clear_history=False
-        )
-        messages = lobby_manager.groupchat.messages
-        assistant_msg = next(
-            (m["content"] for m in reversed(messages) if m.get("role") == "assistant"),
-            "Keine Antwort"
-        )
-        with open("/app/history/conferences/main_lobby.json", "w", encoding="utf-8") as f:
-            json.dump({"messages": messages}, f, indent=2)
-        logger.info(f"💬 Lobby-Antwort: {assistant_msg[:100]}")
-        return {"success": True, "message": assistant_msg}
-    except Exception as e:
-        logger.exception("❌ Fehler beim Lobby-Dialog")
-        raise HTTPException(status_code=500, detail=str(e))
-
 @router.get("/lobby")
-def get_lobby():
-    try:
-        lobby = initialize_lobby()
-        messages = lobby.chat_messages if hasattr(lobby, "chat_messages") else []
-        return {
-            "room": "main_lobby",
-            "status": "open",
-            "messages": messages
-        }
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Fehler beim Laden der Lobby: {str(e)}")
+def lobby_info():
+    return get_lobby()
 
 @router.get("/lobby/history")
-def get_lobby_history():
-    try:
-        history_path = "/app/history/conferences/main_lobby.json"
-        if not os.path.exists(history_path):
-            raise HTTPException(status_code=404, detail="Kein Lobby-Verlauf vorhanden.")
-        with open(history_path, "r", encoding="utf-8") as f:
-            history = json.load(f)
-        return {"success": True, "history": history}
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+def lobby_history():
+    return {"messages": get_lobby_history()}
