@@ -1,13 +1,6 @@
  
 # Umgebungsdateien
-.env
-*.env
-app.pyw
-wipe.py
-rebuild.py
-README.md
 
-utils/
 logs/ 
 # brauche einen zweiten für den container
 # Oder nur bestimmte Dateien: config/local_*
@@ -18,9 +11,7 @@ __pycache__/
 *.pyd
 
 # Virtuelle Umgebungen
-venv/
-env/
-ENV/
+
 
 # IDE-Dateien
 .vs/

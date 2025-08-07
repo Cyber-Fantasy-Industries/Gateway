@@ -1,21 +1,45 @@
 services:
   gateway:
-    build: .
+    build:
+      context: .
+      network: host
     image: gateway
     container_name: gateway-container
     working_dir: /app
-    command: uvicorn backend.main:app --reload --host 0.0.0.0 --port 8080
+    command: /app/.venv/bin/uvicorn backend.main:app --reload --host 0.0.0.0 --port 8080
     ports:
       - "8080:8080"
+    dns:
+      - 8.8.8.8
+      - 8.8.4.4
     volumes:
-      - .:/app
+      - ./backend:/app/backend  # Nur den Code, nicht das ganze Projekt
+      # Optional, falls du weitere Source-Verzeichnisse hast
+      - ./utils:/app/utils
+      - ./src:/app/src
       - ./config:/app/config:ro
+    networks:
+      - gateway-net
     environment:
-      - OPENAI_API_KEY=${OPENAI_API_KEY}
-      - OPENAI_PROJECT_ID=${OPENAI_PROJECT_ID}
-      - OPENAI_ORG_ID=${OPENAI_ORG_ID}
-      - PYTHONPATH=/app
+      OPENAI_API_KEY: "${OPENAI_API_KEY}"
+      OPENAI_PROJECT_ID: "${OPENAI_PROJECT_ID}"
+      OPENAI_ORG_ID: "${OPENAI_ORG_ID}"
+      PYTHONPATH: "/app"
     env_file:
       - .env
     restart: no
 
+  # streamlit:
+  #   build: .
+  #   image: gateway
+  #   # ALS STRING, nicht als LIST!
+  #   command: /app/.venv/bin/streamlit run backend/app.py
+  #   ports:
+  #     - "8501:8501"
+  #   environment:
+  #     - PYTHONPATH=/app
+  #   depends_on:
+  #     - gateway
+networks:
+  gateway-net:
+    driver: bridge

@@ -7,18 +7,21 @@ from backend.routes.agents import router as agents_router
 from backend.routes.conference import router as conference_router
 from backend.routes.settings import router as settings_router
 from backend.routes.websocket import router as websocket_router
-from backend.routes.docker import router as docker_router
 from backend.routes.system import router as system_router
 from backend.routes.websocket import start_watcher
-from backend.agent_core.core import initialize_lobby
+#from backend.agent_core.core import initialize_lobby
+from backend.agent_core.cluster import build_cluster
 from contextlib import asynccontextmanager
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    initialize_lobby()
+    cluster = await build_cluster()
+    #app.state.user_memory = cluster["user_memory"]
+    #app.state.group_memory = cluster["group_memory"]
+    app.state.cluster = cluster  # Zugriff auf alle Agenten
+    #initialize_lobby()
     start_watcher(path="backend/")
     yield
-    # (Optional: Cleanup z.B. shutdown code)
 
 app = FastAPI(
     lifespan=lifespan,
@@ -27,7 +30,6 @@ app = FastAPI(
     version="0.1"
 )
 
-  
 # 📂 Log-Verzeichnis sicherstellen
 LOG_PATH = "logs"
 os.makedirs(LOG_PATH, exist_ok=True)
@@ -44,17 +46,17 @@ app.add_middleware(
 )
 
 # 📌 API-Routen registrieren
-app.include_router(agents_router)
+app.include_router(agents_router, prefix="/api")
 app.include_router(conference_router)
 app.include_router(settings_router)
 app.include_router(websocket_router)
 app.include_router(system_router)
-app.include_router(docker_router)
 
-
+#################################
 # 🔧 Uvicorn-Einstiegspunkt
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8080, reload=False)
+
 
 

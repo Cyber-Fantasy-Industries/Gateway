@@ -20,6 +20,7 @@ def build_image():
 def quick_start():
     print("\nStarting System...")
     subprocess.run(["docker-compose", "up", "-d"], check=True)
+    time.sleep(2)  # Warte 2 Sekunden
     os.system('start cmd /k "docker-compose logs -f"')
     os.system('start cmd /k "docker-compose run gateway bash"')
     time.sleep(2)  # Warte 2 Sekunden
@@ -98,16 +99,6 @@ def menu():
 def print_docker_overview():
     print(" 🖥️  [Docker System Status]")
     print("################################")
-    # image_exists = get_image_status()
-    # container_status = get_container_status()
-    # print(f"  🗂️  Image 'gateway':   {'✅' if image_exists else '❌'}")
-    # if container_status == "running":
-    #     print(f"  🟢 Container 'gateway-container':   läuft")
-    # elif container_status == "stopped":
-    #     print(f"  🟡 Container 'gateway-container':   gestoppt")
-    # else:
-    #     print(f"  🔴 Container 'gateway-container':   nicht vorhanden")
-    # print("─" * 45)
     print(" 📦 Docker Images:")
     try:
         result = subprocess.run(
@@ -128,7 +119,7 @@ def print_docker_overview():
     print("################################")
     print(" 🚢 Docker Container:")
     try:
-        result = subprocess.run(
+        result = subprocess.run( # type: ignore
             [
                 "docker", "ps", "-a",
                 "--format",

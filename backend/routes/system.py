@@ -14,46 +14,61 @@ router = APIRouter(prefix="/api/system", tags=["System"])
 class MessageRequest(BaseModel):
     message: str
 
+
 @router.post("/lobby/say")
 def say_to_lobby(request: MessageRequest):
     try:
         manager = get_lobby_manager()
         user_msg = {
-            "role": "user",    # Muss da bleiben!
+            "role": "user",
             "name": "user",
             "content": request.message
         }
-
         user_agent = next(a for a in manager.groupchat.agents if a.name.lower() == "user")
-        # Die History enthält beim Lobby-Bau bereits die System-Nachricht.
-        # Wir hängen keine weitere System-Nachricht mehr an!
         manager.groupchat.append(user_msg, user_agent)
         print("🚩 Nach Append: Aktuelle Nachrichten:", manager.groupchat.messages)
 
-        # AG2-Style: Events programmatisch verarbeiten (kein .process() im API-Kontext!)
         response = manager.run(n_round=1, user_input=False)
+
         print("--- Verlauf nach .run() ---")
         for msg in manager.groupchat.messages:
             print(msg)
         print("--- Agentenliste ---")
         for a in manager.groupchat.agents:
             print(a.name, type(a))
-        # Fange alle Eingabe-Events ab
+
+        # Event-Handling (falls nötig)
         for event in getattr(response, 'events', []):
             if getattr(event, "type", None) == "input_request":
-                # Beende oder antworte automatisch, z.B. "exit" oder "yes"
                 if hasattr(event.content, "respond"):
                     event.content.respond("exit")
                 continue
-            # Sonstige Events: Optional loggen/auswerten
-        # Finde letzte Admin-Antwort
-        messages = manager.groupchat.messages
-        for m in reversed(messages):
+
+        # Rollen-Fix-Workaround
+        def fix_roles(messages):
+            fixed = []
+            for m in messages:
+                m = dict(m)  # Kopie
+                if m.get('name', '').lower() == 'user':
+                    m['role'] = 'user'
+                elif m.get('name', '').lower() == 'admin':
+                    m['role'] = 'assistant'
+                fixed.append(m)
+            return fixed
+
+        fixed_messages = fix_roles(manager.groupchat.messages)
+        print("--- Nach Rollenfix ---")
+        for msg in fixed_messages:
+            print(msg)
+
+        # Finde letzte Admin-Antwort nach Fix
+        admin_reply = None
+        for m in reversed(fixed_messages):
             if m.get("name", "").lower() == "admin":
+                admin_reply = m["content"]
                 print("Admin-Nachricht gefunden:", m)
                 if m.get("role") != "assistant":
                     print("WARNUNG: Admin-Role ist nicht 'assistant' sondern:", m.get("role"))
-                admin_reply = m["content"]
                 break
         else:
             admin_reply = None
@@ -63,9 +78,9 @@ def say_to_lobby(request: MessageRequest):
         logger.info(f"🟢 Aktuelle Nachrichten: {manager.groupchat.messages}")
         return {
             "success": True,
-            "reply": admin_reply
+            "reply": admin_reply,
+            "messages": fixed_messages
         }
-
 
     except Exception as e:
         import traceback

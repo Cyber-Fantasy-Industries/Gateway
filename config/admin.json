@@ -1,18 +1,17 @@
 {
   "name": "Admin",
-  "system_message": "Du bist ein erfahrener Assistent.",
+  "system_message": "Du bist der system Admin.",
   "description": "Operator im Raum.",
-  "human_input_mode": "TERMINATE",
+  "human_input_mode": "NEVER",
+  "default_auto_reply": "Ich bin der system Admin.",
   "max_consecutive_auto_reply": 1,
-  "default_auto_reply": "Bitte präzisieren Sie Ihre Anfrage.",
-  "is_termination_msg": null,
   "llm_config": {
     "config_list": [
       {
-        "api_key": "{{global}}",
+        "api_key": "",
         "api_type": "openai",
         "base_url": "https://api.openai.com/v1",
-        "model": "gpt-4"
+        "model": "gpt-4.1"
       }
     ],
     "temperature": 0.7,
@@ -25,3 +24,4 @@
     "lang": "python"
   }
 }
+

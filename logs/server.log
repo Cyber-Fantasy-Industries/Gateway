@@ -639,3 +639,463 @@
 2025-07-16 10:26:25.043 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/history/conferences/main_lobby.json')}
 2025-07-16 10:27:24.280 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/history/conferences/main_lobby.json')}
 2025-07-16 10:28:15.037 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/history/conferences/main_lobby.json')}
+2025-07-16 11:16:32.270 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-16 11:16:32.432 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-16 11:16:32.433 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-16 11:17:09.191 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/agent_core/core.py')}
+2025-07-16 11:17:13.068 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-16 11:17:13.215 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-16 11:17:13.215 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-16 11:18:02.796 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-16 11:18:02.943 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-16 11:18:02.943 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-16 11:18:16.034 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/routes/system.py')}
+2025-07-16 11:18:18.128 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-16 11:18:18.275 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-16 11:18:18.275 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-16 11:24:51.189 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/routes/system.py')}
+2025-07-16 11:24:54.099 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-16 11:24:54.259 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-16 11:24:54.259 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-16 11:25:05.296 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/history/conferences/main_lobby.json')}
+2025-07-16 11:31:34.387 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-16 11:31:34.540 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-16 11:31:34.541 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-16 11:32:27.684 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/history/conferences/main_lobby.json')}
+2025-07-16 11:36:56.510 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-16 11:36:56.657 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-16 11:36:56.657 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-16 11:37:45.863 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-16 11:37:46.022 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-16 11:37:46.022 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-16 12:16:17.943 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/agent_core/core.py')}
+2025-07-16 13:05:45.879 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-16 13:09:13.771 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-16 13:09:13.930 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-16 13:09:13.930 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-16 13:11:32.843 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/history/conferences/main_lobby.json')}
+2025-07-16 13:12:49.788 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/history/conferences/main_lobby.json')}
+2025-07-16 13:15:43.922 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-16 13:15:44.061 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-16 13:15:44.061 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-16 13:16:20.121 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-16 13:16:20.260 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-16 13:16:20.261 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-16 13:16:57.701 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/history/conferences/main_lobby.json')}
+2025-07-16 13:17:21.780 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/history/conferences/main_lobby.json')}
+2025-07-16 13:21:08.459 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/routes/system.py')}
+2025-07-16 13:21:13.256 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-16 13:21:13.403 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-16 13:21:13.403 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-16 13:23:33.523 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-16 13:23:33.661 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-16 13:23:33.662 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-16 13:25:01.886 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/history/conferences/main_lobby.json')}
+2025-07-16 13:26:35.810 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/agent_core/core.py')}
+2025-07-16 13:26:38.456 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-16 13:26:38.604 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-16 13:26:38.604 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-16 13:26:53.708 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/history/conferences/main_lobby.json')}
+2025-07-16 13:33:13.210 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/routes/system.py')}
+2025-07-16 13:33:16.036 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-16 13:33:16.175 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-16 13:33:16.176 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-16 13:33:33.735 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/history/conferences/main_lobby.json')}
+2025-07-16 13:35:21.353 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-16 13:35:21.515 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-16 13:35:21.515 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-16 13:49:52.415 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-16 13:49:52.571 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-16 13:49:52.571 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-16 13:52:00.222 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-16 13:52:00.366 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-16 13:52:00.366 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-16 14:06:36.949 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/agent_core/core.py')}
+2025-07-16 14:06:41.640 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-16 14:06:41.801 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-16 14:06:41.801 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-16 14:11:20.740 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-16 14:11:20.883 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-16 14:11:20.884 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-16 14:14:04.990 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-16 14:14:05.133 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-16 14:14:05.133 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-16 15:03:25.503 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-16 15:03:25.639 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-16 15:03:25.639 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-16 15:05:12.765 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-16 15:05:12.897 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-16 15:05:12.897 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-16 15:25:08.244 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-16 15:25:08.383 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-16 15:25:08.383 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-16 15:26:52.944 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-16 15:26:53.085 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-16 15:26:53.085 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-16 15:35:33.927 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-16 15:35:34.069 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-16 15:35:34.070 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-16 15:35:49.914 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-16 15:35:50.055 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-16 15:35:50.055 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-16 15:37:36.402 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-16 15:37:36.543 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-16 15:37:36.543 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-16 15:49:16.114 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/routes/system.py')}
+2025-07-16 15:54:02.939 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-16 15:54:03.069 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-16 15:54:03.069 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-16 15:54:56.195 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-16 15:54:56.338 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-16 15:54:56.338 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-16 15:56:20.168 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/routes/system.py')}
+2025-07-16 15:56:46.101 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-16 15:56:46.236 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-16 15:56:46.236 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-16 15:56:53.520 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/history/conferences/main_lobby.json')}
+2025-07-16 16:03:11.181 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-16 16:03:11.313 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-16 16:03:11.313 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-16 16:03:20.365 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/history/conferences/main_lobby.json')}
+2025-07-16 16:15:36.382 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/history/conferences/main_lobby.json')}
+2025-07-16 16:15:48.500 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/history/conferences/main_lobby.json')}
+2025-07-16 16:16:12.823 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/history/conferences/main_lobby.json')}
+2025-07-16 16:18:40.667 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-16 16:18:40.813 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-16 16:18:40.813 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-16 16:18:46.375 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/history/conferences/main_lobby.json')}
+2025-07-16 16:19:13.283 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/routes/system.py')}
+2025-07-16 16:19:15.530 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-16 16:19:15.668 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-16 16:19:15.668 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-16 16:19:32.109 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/history/conferences/main_lobby.json')}
+2025-07-16 16:26:25.793 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/routes/system.py')}
+2025-07-16 16:26:32.334 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-16 16:26:32.478 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-16 16:26:32.478 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-16 16:26:43.495 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/history/conferences/main_lobby.json')}
+2025-07-16 16:44:46.906 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/agent_core/core.py')}
+2025-07-16 16:44:49.797 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-16 16:44:49.938 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-16 16:44:49.938 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-16 16:44:58.830 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/history/conferences/main_lobby.json')}
+2025-07-16 16:45:18.853 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-16 16:45:18.987 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-16 16:45:18.987 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-16 16:45:27.904 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/history/conferences/main_lobby.json')}
+2025-07-16 16:46:52.832 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-16 16:46:52.980 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-16 16:46:52.980 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-16 16:47:00.094 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/routes/system.py')}
+2025-07-16 16:47:03.899 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-16 16:47:04.040 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-16 16:47:04.040 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-16 17:10:50.509 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/routes/system.py')}
+2025-07-16 17:10:53.672 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-16 17:10:53.818 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-16 17:10:53.818 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-16 17:11:08.856 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/history/conferences/main_lobby.json')}
+2025-07-16 17:22:55.780 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/routes/system.py')}
+2025-07-16 17:22:58.725 | INFO     | backend.main:<module>:35 - 🚀 Gateway API gestartet.
+2025-07-16 17:22:58.861 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-16 17:22:58.861 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-29 15:44:45.945 | INFO     | backend.main:<module>:60 - 🚀 Gateway API gestartet.
+2025-07-29 15:45:39.500 | INFO     | backend.main:<module>:60 - 🚀 Gateway API gestartet.
+2025-07-29 15:53:31.789 | INFO     | backend.main:<module>:60 - 🚀 Gateway API gestartet.
+2025-07-29 15:53:42.232 | INFO     | backend.main:lifespan:34 - ℹ️ Zep-User 'global_brain' existiert bereits.
+2025-07-29 15:53:45.678 | INFO     | backend.main:lifespan:41 - ℹ️ Globale Zep-Session 'aacb6fd83c024d39945577462739adf0' existiert bereits.
+2025-07-29 15:53:45.764 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-29 15:53:45.764 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-29 16:12:04.116 | INFO     | backend.main:<module>:60 - 🚀 Gateway API gestartet.
+2025-07-29 16:12:07.779 | INFO     | backend.main:lifespan:34 - ℹ️ Zep-User 'global_brain' existiert bereits.
+2025-07-29 16:12:11.227 | INFO     | backend.main:lifespan:41 - ℹ️ Globale Zep-Session '02b7768d66c54470afc70a25e98dc2e9' existiert bereits.
+2025-07-29 16:12:11.305 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-29 16:12:11.306 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-29 16:37:27.544 | INFO     | backend.main:<module>:60 - 🚀 Gateway API gestartet.
+2025-07-29 16:37:33.646 | INFO     | backend.main:lifespan:34 - ℹ️ Zep-User 'global_brain' existiert bereits.
+2025-07-29 16:37:37.090 | INFO     | backend.main:lifespan:41 - ℹ️ Globale Zep-Session '11e4f6778f9f4af0960a4edf12942cf7' existiert bereits.
+2025-07-29 16:37:37.172 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-29 16:37:37.172 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-29 18:02:34.979 | INFO     | backend.main:<module>:60 - 🚀 Gateway API gestartet.
+2025-07-29 18:02:38.641 | INFO     | backend.main:lifespan:34 - ℹ️ Zep-User 'global_brain' existiert bereits.
+2025-07-29 18:02:42.099 | INFO     | backend.main:lifespan:41 - ℹ️ Globale Zep-Session 'f5dc8ba7c3704161bb173bede2a1e1b6' existiert bereits.
+2025-07-29 18:02:42.177 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-29 18:02:42.177 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-29 18:20:11.312 | INFO     | backend.main:<module>:60 - 🚀 Gateway API gestartet.
+2025-07-29 18:20:21.805 | INFO     | backend.main:lifespan:34 - ℹ️ Zep-User 'global_brain' existiert bereits.
+2025-07-29 18:20:25.274 | INFO     | backend.main:lifespan:41 - ℹ️ Globale Zep-Session '887e1da7ed45429bb806a8b8cf8e5b1b' existiert bereits.
+2025-07-29 18:20:25.354 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-29 18:20:25.354 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-29 18:20:33.644 | INFO     | backend.main:<module>:60 - 🚀 Gateway API gestartet.
+2025-07-29 18:20:37.307 | INFO     | backend.main:lifespan:34 - ℹ️ Zep-User 'global_brain' existiert bereits.
+2025-07-29 18:20:40.755 | INFO     | backend.main:lifespan:41 - ℹ️ Globale Zep-Session 'dcea930bba914527a947e9af2be2e057' existiert bereits.
+2025-07-29 18:20:40.844 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-29 18:20:40.845 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-29 22:13:29.998 | INFO     | backend.main:<module>:60 - 🚀 Gateway API gestartet.
+2025-07-29 22:13:33.646 | INFO     | backend.main:lifespan:34 - ℹ️ Zep-User 'global_brain' existiert bereits.
+2025-07-29 22:13:43.889 | INFO     | backend.main:lifespan:41 - ℹ️ Globale Zep-Session '79019263bdd14031b798fd3c2acd9e13' existiert bereits.
+2025-07-29 22:13:43.976 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-29 22:13:43.976 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-30 00:14:48.364 | INFO     | backend.main:<module>:60 - 🚀 Gateway API gestartet.
+2025-07-30 00:14:52.095 | INFO     | backend.main:lifespan:34 - ℹ️ Zep-User 'global_brain' existiert bereits.
+2025-07-30 00:14:55.618 | INFO     | backend.main:lifespan:41 - ℹ️ Globale Zep-Session 'd1a91c09cb9a4679b71edcf4f2ab945b' existiert bereits.
+2025-07-30 00:14:55.706 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-30 00:14:55.706 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-30 00:34:44.057 | INFO     | backend.main:<module>:60 - 🚀 Gateway API gestartet.
+2025-07-30 00:34:47.785 | INFO     | backend.main:lifespan:34 - ℹ️ Zep-User 'global_brain' existiert bereits.
+2025-07-30 00:34:51.291 | INFO     | backend.main:lifespan:41 - ℹ️ Globale Zep-Session '4368c84bc59c4c6b8733c8f11a117ce2' existiert bereits.
+2025-07-30 00:34:51.373 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-30 00:34:51.373 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-30 00:53:04.300 | INFO     | backend.main:<module>:60 - 🚀 Gateway API gestartet.
+2025-07-30 00:53:08.053 | INFO     | backend.main:lifespan:34 - ℹ️ Zep-User 'global_brain' existiert bereits.
+2025-07-30 00:53:11.567 | INFO     | backend.main:lifespan:41 - ℹ️ Globale Zep-Session 'bae8b1b8e79e464ea20f083992d350ff' existiert bereits.
+2025-07-30 00:53:11.647 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-30 00:53:11.648 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-30 01:00:59.947 | INFO     | backend.main:<module>:60 - 🚀 Gateway API gestartet.
+2025-07-30 01:01:03.689 | INFO     | backend.main:lifespan:34 - ℹ️ Zep-User 'global_brain' existiert bereits.
+2025-07-30 01:01:13.437 | INFO     | backend.main:lifespan:41 - ℹ️ Globale Zep-Session 'c8ce411a02674c0bb09baac3028889f8' existiert bereits.
+2025-07-30 01:01:13.518 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-30 01:01:13.518 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-30 02:58:06.212 | INFO     | backend.main:<module>:60 - 🚀 Gateway API gestartet.
+2025-07-30 02:58:09.947 | INFO     | backend.main:lifespan:34 - ℹ️ Zep-User 'global_brain' existiert bereits.
+2025-07-30 02:58:13.476 | INFO     | backend.main:lifespan:41 - ℹ️ Globale Zep-Session '6ae7903210e642c2bf73ff35ab2bff44' existiert bereits.
+2025-07-30 02:58:13.559 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-30 02:58:13.560 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-30 03:11:37.922 | INFO     | backend.main:<module>:60 - 🚀 Gateway API gestartet.
+2025-07-30 03:11:41.630 | INFO     | backend.main:lifespan:34 - ℹ️ Zep-User 'global_brain' existiert bereits.
+2025-07-30 03:11:45.139 | INFO     | backend.main:lifespan:41 - ℹ️ Globale Zep-Session 'fddac27c43284762a0bdd37fd170aa34' existiert bereits.
+2025-07-30 03:11:45.232 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-30 03:11:45.233 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-30 10:48:06.783 | INFO     | backend.main:<module>:60 - 🚀 Gateway API gestartet.
+2025-07-30 10:48:06.875 | INFO     | backend.main:lifespan:34 - ℹ️ Zep-User 'global_brain' existiert bereits.
+2025-07-30 10:48:06.877 | INFO     | backend.main:lifespan:41 - ℹ️ Globale Zep-Session '9043ac286b1f405c911cbb871ecdd3fb' existiert bereits.
+2025-07-30 10:48:06.968 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-30 10:48:06.969 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-30 11:07:38.808 | INFO     | backend.main:<module>:60 - 🚀 Gateway API gestartet.
+2025-07-30 11:07:38.894 | INFO     | backend.main:lifespan:34 - ℹ️ Zep-User 'global_brain' existiert bereits.
+2025-07-30 11:07:38.896 | INFO     | backend.main:lifespan:41 - ℹ️ Globale Zep-Session '355813b6c19f4f5c894ad6abb52285f3' existiert bereits.
+2025-07-30 11:07:38.983 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-30 11:07:38.983 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-30 13:56:36.707 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/main.py')}
+2025-07-30 13:56:41.371 | INFO     | backend.main:<module>:66 - 🚀 Gateway API gestartet.
+2025-07-30 13:56:41.453 | INFO     | backend.main:lifespan:35 - ℹ️ Zep-User 'global_brain' existiert bereits.
+2025-07-30 13:56:41.455 | INFO     | backend.main:lifespan:42 - ℹ️ Globale Zep-Session 'ec011da7877a4c0fb930fb77fb82c945' existiert bereits.
+2025-07-30 13:56:41.456 | INFO     | backend.main:lifespan:47 - ℹ️ Globale Thread-Session 'main_brain_thread' existiert bereits.
+2025-07-30 13:56:41.542 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-30 13:56:41.542 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-30 14:05:47.391 | INFO     | backend.main:<module>:66 - 🚀 Gateway API gestartet.
+2025-07-30 14:05:47.468 | INFO     | backend.main:lifespan:35 - ℹ️ Zep-User 'global_brain' existiert bereits.
+2025-07-30 14:05:47.469 | INFO     | backend.main:lifespan:42 - ℹ️ Globale Zep-Session '99f6d973bcc44da0a1b62408d40e42fe' existiert bereits.
+2025-07-30 14:05:47.471 | INFO     | backend.main:lifespan:47 - ℹ️ Globale Thread-Session 'main_brain_thread' existiert bereits.
+2025-07-30 14:05:47.556 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-30 14:05:47.556 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-30 14:14:44.374 | INFO     | backend.main:<module>:66 - 🚀 Gateway API gestartet.
+2025-07-30 14:14:44.450 | INFO     | backend.main:lifespan:35 - ℹ️ Zep-User 'global_brain' existiert bereits.
+2025-07-30 14:14:44.452 | INFO     | backend.main:lifespan:42 - ℹ️ Globale Zep-Session 'f7843c50a4d044b9b11a6abcb51377af' existiert bereits.
+2025-07-30 14:14:44.453 | INFO     | backend.main:lifespan:47 - ℹ️ Globale Thread-Session 'main_brain_thread' existiert bereits.
+2025-07-30 14:14:44.545 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-30 14:14:44.545 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-30 14:17:56.754 | INFO     | backend.main:<module>:66 - 🚀 Gateway API gestartet.
+2025-07-30 14:17:56.841 | INFO     | backend.main:lifespan:35 - ℹ️ Zep-User 'global_brain' existiert bereits.
+2025-07-30 14:17:56.842 | INFO     | backend.main:lifespan:42 - ℹ️ Globale Zep-Session '25634515c1d34968b82794f478f445e1' existiert bereits.
+2025-07-30 14:17:56.844 | INFO     | backend.main:lifespan:47 - ℹ️ Globale Thread-Session 'main_brain_thread' existiert bereits.
+2025-07-30 14:17:56.928 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-30 14:17:56.928 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-30 14:30:15.997 | INFO     | backend.main:<module>:66 - 🚀 Gateway API gestartet.
+2025-07-30 14:30:16.069 | INFO     | backend.main:lifespan:35 - ℹ️ Zep-User 'global_brain' existiert bereits.
+2025-07-30 14:30:16.070 | INFO     | backend.main:lifespan:42 - ℹ️ Globale Zep-Session '490163ff13e44d9ea8ba1440535c00dc' existiert bereits.
+2025-07-30 14:30:16.072 | INFO     | backend.main:lifespan:47 - ℹ️ Globale Thread-Session 'main_brain_thread' existiert bereits.
+2025-07-30 14:30:16.157 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-30 14:30:16.157 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-30 14:58:32.401 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/main.py')}
+2025-07-30 14:58:35.234 | INFO     | backend.main:<module>:67 - 🚀 Gateway API gestartet.
+2025-07-30 14:58:35.315 | INFO     | backend.main:lifespan:34 - ✅ Zep-User 'global_brain' angelegt.
+2025-07-30 14:58:35.316 | INFO     | backend.main:lifespan:41 - ✅ Globale Zep-Session '43371d27057a4b0b82b64ade13e4102a' erstellt.
+2025-07-30 14:58:35.400 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-30 14:58:35.400 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-30 15:02:59.493 | INFO     | backend.main:<module>:68 - 🚀 Gateway API gestartet.
+2025-07-30 15:02:59.583 | INFO     | backend.main:lifespan:37 - ℹ️ Zep-User 'global_brain' existiert bereits.
+2025-07-30 15:02:59.585 | INFO     | backend.main:lifespan:44 - ℹ️ Globale Zep-Session '8cfcd340021b4b8aafd2e6c07d09cda5' existiert bereits.
+2025-07-30 15:02:59.586 | INFO     | backend.main:lifespan:49 - ℹ️ Globale Thread-Session 'main_brain_thread' existiert bereits.
+2025-07-30 15:02:59.672 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-30 15:02:59.673 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-30 15:03:26.141 | INFO     | backend.main:<module>:68 - 🚀 Gateway API gestartet.
+2025-07-30 15:03:26.229 | INFO     | backend.main:lifespan:37 - ℹ️ Zep-User 'global_brain' existiert bereits.
+2025-07-30 15:03:26.230 | INFO     | backend.main:lifespan:44 - ℹ️ Globale Zep-Session '31a24eee2aa8414489e8e0200f68f26e' existiert bereits.
+2025-07-30 15:03:26.232 | INFO     | backend.main:lifespan:49 - ℹ️ Globale Thread-Session 'main_brain_thread' existiert bereits.
+2025-07-30 15:03:26.320 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-30 15:03:26.320 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-30 15:08:26.604 | INFO     | backend.main:<module>:68 - 🚀 Gateway API gestartet.
+2025-07-30 15:08:26.692 | INFO     | backend.main:lifespan:37 - ℹ️ Zep-User 'global_brain' existiert bereits.
+2025-07-30 15:08:26.693 | INFO     | backend.main:lifespan:44 - ℹ️ Globale Zep-Session 'b0d2d0b53deb435c8f5fd849ae50e1c6' existiert bereits.
+2025-07-30 15:08:26.695 | INFO     | backend.main:lifespan:49 - ℹ️ Globale Thread-Session 'main_brain_thread' existiert bereits.
+2025-07-30 15:08:26.780 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-30 15:08:26.781 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-30 15:10:33.371 | INFO     | backend.main:<module>:68 - 🚀 Gateway API gestartet.
+2025-07-30 15:10:33.445 | INFO     | backend.main:lifespan:37 - ℹ️ Zep-User 'global_brain' existiert bereits.
+2025-07-30 15:10:33.447 | INFO     | backend.main:lifespan:44 - ℹ️ Globale Zep-Session '63ecf56c8998449ea9c47003a3a396a1' existiert bereits.
+2025-07-30 15:10:33.448 | INFO     | backend.main:lifespan:49 - ℹ️ Globale Thread-Session 'main_brain_thread' existiert bereits.
+2025-07-30 15:10:33.549 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-30 15:10:33.550 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-30 15:16:04.360 | INFO     | backend.main:<module>:68 - 🚀 Gateway API gestartet.
+2025-07-30 15:16:04.401 | INFO     | backend.main:lifespan:37 - ℹ️ Zep-User 'global_brain' existiert bereits.
+2025-07-30 15:16:04.403 | INFO     | backend.main:lifespan:44 - ℹ️ Globale Zep-Session '4a7fc5509b614338a922602e6f75f7a7' existiert bereits.
+2025-07-30 15:16:04.405 | INFO     | backend.main:lifespan:49 - ℹ️ Globale Thread-Session 'main_brain_thread' existiert bereits.
+2025-07-30 15:16:04.499 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-30 15:16:04.499 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-30 15:18:34.013 | INFO     | backend.main:<module>:68 - 🚀 Gateway API gestartet.
+2025-07-30 15:24:33.963 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/main.py')}
+2025-07-30 15:24:36.805 | INFO     | backend.main:<module>:69 - 🚀 Gateway API gestartet.
+2025-07-30 15:24:36.811 | INFO     | backend.main:lifespan:38 - ℹ️ Zep-User 'global_brain' existiert bereits.
+2025-07-30 15:24:36.812 | INFO     | backend.main:lifespan:45 - ℹ️ Globale Zep-Session '889b72cc02a84401821807d0ee1569f6' existiert bereits.
+2025-07-30 15:24:36.812 | INFO     | backend.main:lifespan:50 - ℹ️ Globale Thread-Session 'main_brain_thread' existiert bereits.
+2025-07-30 15:24:36.898 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-30 15:24:36.898 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-30 15:24:46.580 | INFO     | backend.main:<module>:69 - 🚀 Gateway API gestartet.
+2025-07-30 15:31:41.595 | INFO     | backend.main:<module>:69 - 🚀 Gateway API gestartet.
+2025-07-30 15:31:41.601 | INFO     | backend.main:lifespan:38 - ℹ️ Zep-User 'global_brain' existiert bereits.
+2025-07-30 15:31:41.602 | INFO     | backend.main:lifespan:45 - ℹ️ Globale Zep-Session 'fa3026807819477db4e651f42ed4942b' existiert bereits.
+2025-07-30 15:31:41.602 | INFO     | backend.main:lifespan:50 - ℹ️ Globale Thread-Session 'main_brain_thread' existiert bereits.
+2025-07-30 15:31:41.684 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-30 15:31:41.684 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-30 15:31:59.080 | INFO     | backend.main:<module>:69 - 🚀 Gateway API gestartet.
+2025-07-30 15:35:50.501 | INFO     | backend.main:<module>:69 - 🚀 Gateway API gestartet.
+2025-07-30 15:35:50.507 | INFO     | backend.main:lifespan:38 - ℹ️ Zep-User 'global_brain' existiert bereits.
+2025-07-30 15:35:50.508 | INFO     | backend.main:lifespan:45 - ℹ️ Globale Zep-Session 'afad6b9c8d72418e8bb2c7b9ae882c0b' existiert bereits.
+2025-07-30 15:35:50.508 | INFO     | backend.main:lifespan:50 - ℹ️ Globale Thread-Session 'main_brain_thread' existiert bereits.
+2025-07-30 15:35:50.594 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-30 15:35:50.594 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-30 15:36:17.394 | INFO     | backend.main:<module>:69 - 🚀 Gateway API gestartet.
+2025-07-30 15:54:36.786 | INFO     | backend.main:<module>:69 - 🚀 Gateway API gestartet.
+2025-07-30 15:54:36.792 | INFO     | backend.main:lifespan:38 - ℹ️ Zep-User 'global_brain' existiert bereits.
+2025-07-30 15:54:36.793 | INFO     | backend.main:lifespan:45 - ℹ️ Globale Zep-Session '983c72f29ab44df7bbefa54f79918555' existiert bereits.
+2025-07-30 15:54:36.793 | INFO     | backend.main:lifespan:50 - ℹ️ Globale Thread-Session 'main_brain_thread' existiert bereits.
+2025-07-30 15:54:36.886 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-30 15:54:36.886 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-30 16:13:10.169 | INFO     | backend.main:<module>:69 - 🚀 Gateway API gestartet.
+2025-07-30 16:13:10.175 | INFO     | backend.main:lifespan:38 - ℹ️ Zep-User 'global_brain' existiert bereits.
+2025-07-30 16:13:10.176 | INFO     | backend.main:lifespan:45 - ℹ️ Globale Zep-Session 'f507a4a49f9c4e79b820d0fd94126b7c' existiert bereits.
+2025-07-30 16:13:10.177 | INFO     | backend.main:lifespan:50 - ℹ️ Globale Thread-Session 'main_brain_thread' existiert bereits.
+2025-07-30 16:13:10.260 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-30 16:13:10.261 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-30 16:13:23.243 | INFO     | backend.main:<module>:69 - 🚀 Gateway API gestartet.
+2025-07-30 16:19:10.261 | INFO     | backend.main:<module>:69 - 🚀 Gateway API gestartet.
+2025-07-30 16:19:10.268 | INFO     | backend.main:lifespan:38 - ℹ️ Zep-User 'global_brain' existiert bereits.
+2025-07-30 16:19:10.269 | INFO     | backend.main:lifespan:45 - ℹ️ Globale Zep-Session 'afd6c2dc194e4ed9b90941d1c882bc64' existiert bereits.
+2025-07-30 16:19:10.270 | INFO     | backend.main:lifespan:50 - ℹ️ Globale Thread-Session 'main_brain_thread' existiert bereits.
+2025-07-30 16:19:10.356 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-30 16:19:10.356 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-30 16:19:16.987 | INFO     | backend.main:<module>:69 - 🚀 Gateway API gestartet.
+2025-07-30 16:21:16.512 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/main.py')}
+2025-07-30 16:21:22.737 | INFO     | backend.main:<module>:69 - 🚀 Gateway API gestartet.
+2025-07-30 16:21:22.746 | INFO     | backend.main:lifespan:38 - ℹ️ Zep-User 'global_brain' existiert bereits.
+2025-07-30 16:21:22.747 | INFO     | backend.main:lifespan:45 - ℹ️ Globale Zep-Session 'ced41a8ab96c468aa8684e921d403863' existiert bereits.
+2025-07-30 16:21:22.748 | INFO     | backend.main:lifespan:50 - ℹ️ Globale Thread-Session 'main_brain_thread' existiert bereits.
+2025-07-30 16:21:22.831 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-30 16:21:22.831 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-30 16:21:26.237 | INFO     | backend.main:<module>:69 - 🚀 Gateway API gestartet.
+2025-07-30 16:24:01.125 | INFO     | backend.main:<module>:69 - 🚀 Gateway API gestartet.
+2025-07-30 16:24:01.134 | INFO     | backend.main:lifespan:38 - ℹ️ Zep-User 'global_brain' existiert bereits.
+2025-07-30 16:24:01.136 | INFO     | backend.main:lifespan:45 - ℹ️ Globale Zep-Session 'd30aa923876342dcb9a6addb55aadbf5' existiert bereits.
+2025-07-30 16:24:01.138 | INFO     | backend.main:lifespan:50 - ℹ️ Globale Thread-Session 'main_brain_thread' existiert bereits.
+2025-07-30 16:24:01.222 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-30 16:24:01.222 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-30 16:25:33.344 | INFO     | backend.main:<module>:69 - 🚀 Gateway API gestartet.
+2025-07-30 16:25:33.353 | INFO     | backend.main:lifespan:38 - ℹ️ Zep-User 'global_brain' existiert bereits.
+2025-07-30 16:25:33.354 | INFO     | backend.main:lifespan:45 - ℹ️ Globale Zep-Session '4c730e0ecbe64cb3a49ec53271aa6fbe' existiert bereits.
+2025-07-30 16:25:33.356 | INFO     | backend.main:lifespan:50 - ℹ️ Globale Thread-Session 'main_brain_thread' existiert bereits.
+2025-07-30 16:25:33.440 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-30 16:25:34.351 | INFO     | backend.main:<module>:69 - 🚀 Gateway API gestartet.
+2025-07-30 16:25:33.440 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-30 16:27:57.468 | INFO     | backend.main:<module>:69 - 🚀 Gateway API gestartet.
+2025-07-30 16:27:57.478 | INFO     | backend.main:lifespan:38 - ℹ️ Zep-User 'global_brain' existiert bereits.
+2025-07-30 16:27:57.479 | INFO     | backend.main:lifespan:45 - ℹ️ Globale Zep-Session 'fd4288724c904e26ade8c54a0780e61c' existiert bereits.
+2025-07-30 16:27:57.481 | INFO     | backend.main:lifespan:50 - ℹ️ Globale Thread-Session 'main_brain_thread' existiert bereits.
+2025-07-30 16:27:57.569 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-30 16:27:57.569 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-30 16:28:18.239 | INFO     | backend.main:<module>:69 - 🚀 Gateway API gestartet.
+2025-07-30 16:31:41.384 | INFO     | backend.main:<module>:69 - 🚀 Gateway API gestartet.
+2025-07-30 16:31:41.393 | INFO     | backend.main:lifespan:38 - ℹ️ Zep-User 'global_brain' existiert bereits.
+2025-07-30 16:31:41.395 | INFO     | backend.main:lifespan:45 - ℹ️ Globale Zep-Session 'a36acdd87c1344148c15b09b4f92da53' existiert bereits.
+2025-07-30 16:31:41.396 | INFO     | backend.main:lifespan:50 - ℹ️ Globale Thread-Session 'main_brain_thread' existiert bereits.
+2025-07-30 16:31:41.485 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-30 16:31:41.485 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-30 16:33:30.356 | INFO     | backend.main:<module>:69 - 🚀 Gateway API gestartet.
+2025-07-30 16:34:37.452 | INFO     | backend.main:<module>:69 - 🚀 Gateway API gestartet.
+2025-07-30 16:45:37.318 | INFO     | backend.main:<module>:69 - 🚀 Gateway API gestartet.
+2025-07-30 16:45:37.328 | INFO     | backend.main:lifespan:38 - ℹ️ Zep-User 'global_brain' existiert bereits.
+2025-07-30 16:45:37.329 | INFO     | backend.main:lifespan:45 - ℹ️ Globale Zep-Session 'ca62bc7d88f0468bae07f9bff60e195c' existiert bereits.
+2025-07-30 16:45:37.331 | INFO     | backend.main:lifespan:50 - ℹ️ Globale Thread-Session 'main_brain_thread' existiert bereits.
+2025-07-30 16:45:37.422 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-30 16:45:37.422 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-30 16:52:37.439 | INFO     | backend.main:<module>:69 - 🚀 Gateway API gestartet.
+2025-07-30 16:52:37.448 | INFO     | backend.main:lifespan:38 - ℹ️ Zep-User 'global_brain' existiert bereits.
+2025-07-30 16:52:37.449 | INFO     | backend.main:lifespan:45 - ℹ️ Globale Zep-Session '16dfeac2b7234feb83606b09be33bb3b' existiert bereits.
+2025-07-30 16:52:37.450 | INFO     | backend.main:lifespan:50 - ℹ️ Globale Thread-Session 'main_brain_thread' existiert bereits.
+2025-07-30 16:52:37.532 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-30 16:52:37.532 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-30 16:58:08.008 | INFO     | backend.main:<module>:69 - 🚀 Gateway API gestartet.
+2025-07-30 16:58:11.736 | INFO     | backend.main:lifespan:38 - ℹ️ Zep-User 'global_brain' existiert bereits.
+2025-07-30 16:58:20.562 | INFO     | backend.main:lifespan:45 - ℹ️ Globale Zep-Session 'e64e542393204351984c75a96d8a5f41' existiert bereits.
+2025-07-30 16:58:24.192 | INFO     | backend.main:lifespan:50 - ℹ️ Globale Thread-Session 'main_brain_thread' existiert bereits.
+2025-07-30 16:58:24.280 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-30 16:58:24.280 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-30 17:02:10.394 | INFO     | backend.main:<module>:69 - 🚀 Gateway API gestartet.
+2025-07-30 17:02:14.090 | INFO     | backend.main:lifespan:38 - ℹ️ Zep-User 'global_brain' existiert bereits.
+2025-07-30 17:02:17.656 | INFO     | backend.main:lifespan:45 - ℹ️ Globale Zep-Session 'f3f9c0d1c72145ffbe1657cb10e86dea' existiert bereits.
+2025-07-30 17:02:21.253 | INFO     | backend.main:lifespan:50 - ℹ️ Globale Thread-Session 'main_brain_thread' existiert bereits.
+2025-07-30 17:02:21.340 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-30 17:02:21.340 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-30 17:02:56.124 | INFO     | backend.main:<module>:69 - 🚀 Gateway API gestartet.
+2025-07-30 17:10:57.433 | INFO     | backend.main:<module>:69 - 🚀 Gateway API gestartet.
+2025-07-30 17:11:01.161 | INFO     | backend.main:lifespan:38 - ℹ️ Zep-User 'global_brain' existiert bereits.
+2025-07-30 17:11:10.433 | INFO     | backend.main:lifespan:45 - ℹ️ Globale Zep-Session '65cc434fe32f481a831aff920c72ffd9' existiert bereits.
+2025-07-30 17:11:14.050 | INFO     | backend.main:lifespan:50 - ℹ️ Globale Thread-Session 'main_brain_thread' existiert bereits.
+2025-07-30 17:11:14.139 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-30 17:11:14.139 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-30 17:13:06.955 | INFO     | backend.main:<module>:69 - 🚀 Gateway API gestartet.
+2025-07-30 17:13:16.350 | INFO     | backend.main:lifespan:38 - ℹ️ Zep-User 'global_brain' existiert bereits.
+2025-07-30 17:13:19.959 | INFO     | backend.main:lifespan:45 - ℹ️ Globale Zep-Session '86bd4da58da64ab289376566b7c317e7' existiert bereits.
+2025-07-30 17:13:23.558 | INFO     | backend.main:lifespan:50 - ℹ️ Globale Thread-Session 'main_brain_thread' existiert bereits.
+2025-07-30 17:13:23.644 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-30 17:13:23.644 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-30 17:19:05.145 | INFO     | backend.main:<module>:69 - 🚀 Gateway API gestartet.
+2025-07-30 17:19:08.900 | INFO     | backend.main:lifespan:38 - ℹ️ Zep-User 'global_brain' existiert bereits.
+2025-07-30 17:19:12.504 | INFO     | backend.main:lifespan:45 - ℹ️ Globale Zep-Session '5845fad2227c4465be9c877e2ef0c54a' existiert bereits.
+2025-07-30 17:19:16.086 | INFO     | backend.main:lifespan:50 - ℹ️ Globale Thread-Session 'main_brain_thread' existiert bereits.
+2025-07-30 17:19:16.166 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-30 17:19:16.167 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-30 17:21:26.736 | INFO     | backend.main:<module>:69 - 🚀 Gateway API gestartet.
+2025-07-30 19:05:54.548 | INFO     | backend.main:<module>:69 - 🚀 Gateway API gestartet.
+2025-07-30 19:05:58.237 | INFO     | backend.main:lifespan:38 - ℹ️ Zep-User 'global_brain' existiert bereits.
+2025-07-30 19:06:01.799 | INFO     | backend.main:lifespan:45 - ℹ️ Globale Zep-Session '23482754a3794f79affbc1927c32b3bf' existiert bereits.
+2025-07-30 19:06:05.340 | INFO     | backend.main:lifespan:50 - ℹ️ Globale Thread-Session 'main_brain_thread' existiert bereits.
+2025-07-30 19:06:05.430 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-30 19:06:05.430 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-30 20:03:50.068 | INFO     | backend.main:<module>:69 - 🚀 Gateway API gestartet.
+2025-07-30 20:03:50.077 | INFO     | backend.main:lifespan:38 - ℹ️ Zep-User 'global_brain' existiert bereits.
+2025-07-30 20:03:50.079 | INFO     | backend.main:lifespan:45 - ℹ️ Globale Zep-Session '12b977226961489f9b41f00a1a3c69f9' existiert bereits.
+2025-07-30 20:03:50.080 | INFO     | backend.main:lifespan:50 - ℹ️ Globale Thread-Session 'main_brain_thread' existiert bereits.
+2025-07-30 20:03:50.163 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-30 20:03:50.163 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-30 20:11:01.626 | INFO     | backend.main:<module>:69 - 🚀 Gateway API gestartet.
+2025-07-30 20:25:56.387 | INFO     | backend.main:<module>:69 - 🚀 Gateway API gestartet.
+2025-07-30 20:25:56.395 | INFO     | backend.main:lifespan:38 - ℹ️ Zep-User 'global_brain' existiert bereits.
+2025-07-30 20:25:56.395 | INFO     | backend.main:lifespan:45 - ℹ️ Globale Zep-Session '8f2319bb9b734e788784e773df378740' existiert bereits.
+2025-07-30 20:25:56.396 | INFO     | backend.main:lifespan:50 - ℹ️ Globale Thread-Session 'main_brain_thread' existiert bereits.
+2025-07-30 20:25:56.479 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-30 20:25:56.479 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-30 20:34:12.449 | INFO     | backend.main:<module>:69 - 🚀 Gateway API gestartet.
+2025-07-30 20:34:12.457 | INFO     | backend.main:lifespan:38 - ℹ️ Zep-User 'global_brain' existiert bereits.
+2025-07-30 20:34:12.458 | INFO     | backend.main:lifespan:45 - ℹ️ Globale Zep-Session '7367043e43fe4371a58ac8d3b23220b6' existiert bereits.
+2025-07-30 20:34:12.459 | INFO     | backend.main:lifespan:50 - ℹ️ Globale Thread-Session 'main_brain_thread' existiert bereits.
+2025-07-30 20:34:12.541 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-30 20:34:12.541 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.
+2025-07-30 20:34:46.138 | INFO     | backend.main:<module>:69 - 🚀 Gateway API gestartet.
+2025-07-30 21:10:59.953 | INFO     | backend.routes.websocket:watcher:61 - 📦 Änderung erkannt: {(<Change.modified: 2>, 'backend/main.py')}
+2025-07-30 21:11:03.776 | INFO     | backend.main:<module>:72 - 🚀 Gateway API gestartet.
+2025-07-30 21:11:03.784 | INFO     | backend.main:lifespan:41 - ℹ️ Zep-User 'global_brain' existiert bereits.
+2025-07-30 21:11:03.785 | INFO     | backend.main:lifespan:48 - ℹ️ Globale Zep-Session '77edc95b14b4487abf3ce33bb68b60dc' existiert bereits.
+2025-07-30 21:11:03.786 | INFO     | backend.main:lifespan:53 - ℹ️ Globale Thread-Session 'main_brain_thread' existiert bereits.
+2025-07-30 21:11:03.869 | INFO     | backend.routes.websocket:watcher:59 - 👀 Watcher gestartet für: backend/
+2025-07-30 21:11:03.870 | INFO     | backend.routes.websocket:start_watcher:67 - 🧵 Watcher-Thread gestartet.

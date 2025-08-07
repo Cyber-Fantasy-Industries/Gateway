@@ -1,14 +1,19 @@
 {
   "messages": [
     {
-      "content": "exit",
+      "content": "",
       "role": "user",
       "name": "user"
     },
     {
-      "content": "Du m\u00f6chtest die Sitzung beenden oder dich abmelden? Hier sind einige M\u00f6glichkeiten, abh\u00e4ngig davon, was du erreichen m\u00f6chtest:\n\n1. Terminal-Sitzung beenden:\nEinfach exit eingeben und Enter dr\u00fccken.\n\n2. SSH-Verbindung beenden:\nexit oder logout eingeben.\n\n3. Dich als Benutzer abmelden (Desktop-Umgebung):\n- Unter Windows: Abmelden \u00fcber das Startmen\u00fc.\n- Unter Linux (GUI): Abmelden \u00fcber das Men\u00fc oder STRG+ALT+ENTF dr\u00fccken und \u201eAbmelden\u201c w\u00e4hlen.\n\nFalls du etwas Spezifisches meinst, gib mir bitte mehr Kontext!",
+      "content": "Hallo! Wie kann ich dir als System Administrator helfen? Gibt es ein technisches Problem, eine Frage zu Servern, Netzwerken, Benutzerverwaltung oder etwas anderes im IT-Bereich? Sag mir einfach, worum es geht!",
       "role": "user",
       "name": "Admin"
+    },
+    {
+      "content": "",
+      "role": "user",
+      "name": "User"
     }
   ]
 }
