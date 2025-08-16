@@ -1,5 +1,0 @@
-{
-  "name": "User",
-  "human_input_mode": "TERMINATE",
-  "is_termination_msg": "lambda msg: msg['content'].strip().endswith('?')"
-}

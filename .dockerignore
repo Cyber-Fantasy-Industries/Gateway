@@ -1,6 +1,6 @@
  
 # Umgebungsdateien
-
+trashcan/
 logs/ 
 # brauche einen zweiten für den container
 # Oder nur bestimmte Dateien: config/local_*

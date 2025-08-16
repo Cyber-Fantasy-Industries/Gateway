@@ -1,218 +1,296 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Gateway Docker-Dev CLI (slim)
+- Full Rebuild (+wipe)
+- Start / Stop
+- Enter running container shell (docker exec)
+- Debug (DNS + Health)
+- Compact Docker status overview
+
+Notes:
+- Works with both `docker-compose` and `docker compose`.
+- Service/Container names assumed: `gateway` / `gateway-container`.
+"""
+
 import os
-import subprocess
-import traceback
+import platform
 import subprocess
 import time
+from shutil import which
+import traceback
+import re
+from pathlib import Path
+
 
 COMPOSE_FILE = "docker-compose.yml"
+SERVICE_NAME = "gateway"
 CONTAINER_NAME = "gateway-container"
 
-def rebuild_image():
-    print("\n♻️ Rebuild started...")
-    wipe_all()
-    build_image()
-    quick_start()
+# -----------------------------------------------------------------------------
+# Helpers
+# -----------------------------------------------------------------------------
 
-def build_image():
-    print("\n🔨 Start Image-Build...")
-    subprocess.run(["docker-compose", "build", "--no-cache"], check=True)
+ENV_FILE = Path(".env")  # Compose liest diese Datei automatisch, wenn vorhanden
+SERVICE_NAME = "gateway"  # du nutzt das bereits – falls anders, hier anpassen
+
+def _read_env_file(path: Path) -> dict[str, str]:
+    if not path.exists():
+        return {}
+    data: dict[str, str] = {}
+    for line in path.read_text().splitlines():
+        if not line or line.strip().startswith("#") or "=" not in line:
+            continue
+        k, v = line.split("=", 1)
+        data[k.strip()] = v.strip()
+    return data
+
+def _write_env_file_var(path: Path, key: str, value: str) -> None:
+    """Setzt/aktualisiert KEY=VALUE in .env (idempotent)."""
+    lines = []
+    found = False
+    if path.exists():
+        for line in path.read_text().splitlines():
+            if re.match(rf"^\s*{re.escape(key)}\s*=", line):
+                lines.append(f"{key}={value}")
+                found = True
+            else:
+                lines.append(line)
+    if not found:
+        lines.append(f"{key}={value}")
+    path.write_text("\n".join(lines) + "\n")
+
+def set_openai_key_interactive():
+    print("Bitte neuen OPENAI_API_KEY eingeben (wird in .env persistiert):")
+    try:
+        new_key = input("OPENAI_API_KEY = ").strip()
+    except KeyboardInterrupt:
+        print("\nAbgebrochen.")
+        return
+    if not new_key or not new_key.startswith("sk-"):
+        print("Ungültig oder leer – keine Änderung.")
+        return
+
+    # 1) In Prozess-Env setzen (damit docker compose den Wert sieht)
+    os.environ["OPENAI_API_KEY"] = new_key
+
+    # 2) .env persistent aktualisieren (damit Folge-Starts den Key haben)
+    _write_env_file_var(ENV_FILE, "OPENAI_API_KEY", new_key)
+    print(f"Gesetzt. (.env aktualisiert, Länge={len(new_key)})")
+
+def restart_gateway(force_recreate: bool = True):
+    compose = _compose_bin()
+    args = [*compose.split(), "up", "-d"]
+    if force_recreate:
+        args.append("--force-recreate")
+    args.append(SERVICE_NAME)
+    print("Recreating gateway mit aktuellem Env …")
+    _run(args, check=True)
+    print("Done.")
+
+
+def _is_windows() -> bool:
+    return os.name == "nt" or platform.system().lower().startswith("win")
+
+
+def _compose_bin() -> str:
+    # Prefer docker-compose if available, else fallback to docker compose
+    if which("docker-compose"):
+        return "docker-compose"
+    return "docker compose"
+
+
+def _run(cmd, check: bool = False, capture: bool = False, echo: bool = True):
+    display = " ".join(cmd) if isinstance(cmd, list) else cmd
+    if echo:
+        print(f"$ {display}")
+    if capture:
+        return subprocess.run(cmd, check=check, capture_output=True, text=True)
+    return subprocess.run(cmd, check=check)
+
+
+def _to_text(s) -> str:
+    if s is None:
+        return ""
+    if isinstance(s, (bytes, bytearray)):
+        try:
+            return s.decode()
+        except Exception:
+            return s.decode(errors="ignore")
+    return str(s)
+
+# -----------------------------------------------------------------------------
+# Core actions
+# -----------------------------------------------------------------------------
+
+def open_logs_window():
+    """Open a live logs window for the gateway service."""
+    compose = _compose_bin()
+    if _is_windows():
+        os.system(f'start cmd /k "{compose} logs -f {SERVICE_NAME}"')
+    else:
+        subprocess.Popen(["bash", "-lc", f"{compose} logs -f {SERVICE_NAME}"])
+
+
+def enter_container_shell():
+    """Open an interactive shell in the running server container (no new run-container)."""
+    cmd = f"docker exec -it {CONTAINER_NAME} bash"
+    if _is_windows():
+        os.system(f'start cmd /k "{cmd}"')
+    else:
+        subprocess.call(["bash", "-lc", cmd])
+
 
 def quick_start():
-    print("\nStarting System...")
-    subprocess.run(["docker-compose", "up", "-d"], check=True)
-    time.sleep(2)  # Warte 2 Sekunden
-    os.system('start cmd /k "docker-compose logs -f"')
-    os.system('start cmd /k "docker-compose run gateway bash"')
-    time.sleep(2)  # Warte 2 Sekunden
+    compose = _compose_bin()
+    print("Starting System…")
+    _run([*compose.split(), "up", "-d"], check=True)
+    time.sleep(2)
+    open_logs_window()
+    enter_container_shell()
     print("System Started.")
 
 
 def stop_container():
-    print("\nStoping System...")
-    subprocess.run(["docker-compose", "stop"], check=True)
-    subprocess.run(["docker-compose", "down"], check=True)
-    kill_all_gateway_containers()
-    print("System Stopped.")
+    compose = _compose_bin()
+    print("Stopping System…")
+    _run([*compose.split(), "stop", SERVICE_NAME], check=False)
+    print("Stopped.")
 
-def kill_all_gateway_containers():
-    print("\n🧹 Removing all Gateway-Containers...")
-    # Hole alle Container, deren Name mit 'gateway' beginnt
-    import subprocess
-    result = subprocess.run(
-        ["docker", "ps", "-a", "--filter", "name=gateway", "--format", "{{.ID}}\t{{.Names}}"],
-        stdout=subprocess.PIPE, text=True
-    )
-    lines = result.stdout.strip().split('\n')
-    if lines and lines[0]:
-        ids = [line.split('\t')[0] for line in lines]
-        for cid in ids:
-            subprocess.run(["docker", "rm", "-f", cid])
-            print(f"🗑 Removed Container {cid}")
-    else:
-        print("ℹ️ No Container found.")
 
 def wipe_all():
-    print("\nDeleting Gateway...")
-    subprocess.run(["docker-compose", "down", "--rmi", "all", "-v", "--remove-orphans"], check=True)
-    #kill_all_gateway_containers()
-    subprocess.run(["docker", "network", "rm", "gateway_default"])
-    subprocess.run(["docker", "system", "prune", "-af"], check=True)
+    """Aggressive wipe: down (images, volumes, orphans) + prune + legacy network cleanup."""
+    compose = _compose_bin()
+    print("Deleting Gateway...")
+    # Compose down incl. images, volumes, orphans (ok if already down)
+    _run([*compose.split(), "down", "--rmi", "all", "-v", "--remove-orphans"], check=False)
+    # Remove possible legacy/default networks (ignore errors if not present)
+    _run(["docker", "network", "rm", "gateway_default"], check=False)
+    _run(["docker", "network", "rm", "gateway-net"], check=False)
+    # Reclaim space aggressively
+    _run(["docker", "system", "prune", "-af"], check=True)
+    print("Wipe complete.")
 
-    try:
-        result = subprocess.run(
-            ["docker", "images", "-a", "--format", "{{.Repository}}:{{.Tag}}\t{{.ID}}"],
-            stdout=subprocess.PIPE, text=True
-        )
-        for line in result.stdout.strip().split('\n'):
-            if line.startswith("gateway"):
-                parts = line.split("\t")
-                if len(parts) == 2:
-                    img_id = parts[1]
-                    subprocess.run(["docker", "rmi", "-f", img_id])
-                    print(f"🗑️  Gateway-Image entfernt: {img_id}")
-    except Exception as e:
-        print("Fehler beim expliziten Entfernen der Images:", e)
-    print("✅ System-Wipe completed.")
-    if "OPENAI_API_KEY" in os.environ:
-        del os.environ["OPENAI_API_KEY"]
 
-###########
-def menu():
-    print("\n################################")
-    print("### [Gateway Docker-Dev CLI] ###")
-    print("################################")
-    print_docker_overview()
-    print("#")
-    print("#  r: Wipe System and Rebuild Image")
-    print("#")
-    print("#  a: Quick Start")
-    print("#")
-    print("#  s: Stop")
-    print("#")
-    print("#  w: wipe")
-    print("#")
-    print("#  x: Exit (Container läuft weiter)")
-    print("#")
-    print("#","-" * 30)
+def rebuild_image():
+    compose = _compose_bin()
+    print("Rebuilding Image (no cache)…")
+    _run([*compose.split(), "build", "--no-cache", SERVICE_NAME], check=True)
+    print("Build complete.")
+
+
+def full_rebuild():
+    """Full rebuild: wipe (down, images, prune) then build & up fresh."""
+    compose = _compose_bin()
+    print("[Full Rebuild] Wipe …")
+    wipe_all()
+    print("[Full Rebuild] Build --no-cache …")
+    _run([*compose.split(), "build", "--no-cache", SERVICE_NAME], check=True)
+    print("[Full Rebuild] Up -d …")
+    _run([*compose.split(), "up", "-d"], check=True)
+    time.sleep(2)
+    open_logs_window()
+    enter_container_shell()
+    print("[Full Rebuild] Done.")
+
+
+def _has_any(cmd) -> bool:
+    r = _run(cmd, check=False, capture=True, echo=False)
+    out = _to_text(getattr(r, "stdout", "")).strip()
+    return bool(out)
 
 
 def print_docker_overview():
+    compose = _compose_bin()
+    print("══════════════════════════════════════════════")
     print(" 🖥️  [Docker System Status]")
-    print("################################")
-    print(" 📦 Docker Images:")
-    try:
-        result = subprocess.run(
-            ["docker", "images", "--format", "{:<18} {:<14} {:<8}".format("{{.Repository}}:{{.Tag}}", "{{.ID}}", "{{.Size}}")],
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
-            text=True
-        )
-        lines = result.stdout.strip().split('\n')
-        if lines and lines[0]:
-            print("  {:<18} {:<14} {:<8}".format("REPOSITORY:TAG", "ID", "GRÖSSE"))
-            for line in lines:
-                print("  " + line)
-        else:
-            print("  ❌ Keine Images gefunden.")
-    except Exception as e:
-        print("  Fehler beim Auflisten der Images:", e)
-    print("################################")
-    print(" 🚢 Docker Container:")
-    try:
-        result = subprocess.run( # type: ignore
-            [
-                "docker", "ps", "-a",
-                "--format",
-                "{:<12} {:<32} {:<18} {:<16} {:<20} {:<30} {:<12}".format(
-                    "{{.ID}}", "{{.Names}}", "{{.Status}}", "{{.Image}}",
-                    "{{.Command}}", "{{.CreatedAt}}", "{{.Ports}}"
-                )
-            ],
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
-            text=True
-        )
-        lines = result.stdout.strip().split('\n')
-        if lines and lines[0]:
-            print("  {:<12} {:<32} {:<18} {:<16} {:<20} {:<30} {:<12}".format(
-                "ID", "NAME", "STATUS", "IMAGE", "COMMAND", "CREATED AT", "PORTS"
-            ))
-            for line in lines:
-                print("  " + line)
-        else:
-            print("  ❌ Keine Container gefunden.")
-    except Exception as e:
-        print("  Fehler beim Auflisten der Container:", e)
-    print("################################")
-    print(" 🌐 Docker Netzwerke:")
-    try:
-        result = subprocess.run(
-            ["docker", "network", "ls", "--format", "{:<20} {:<20} {:<16}".format("{{.Name}}", "{{.Driver}}", "{{.Scope}}")],
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
-            text=True
-        )
-        lines = result.stdout.strip().split('\n')
-        if lines and lines[0]:
-            print("  {:<20} {:<20} {:<16}".format("NAME", "DRIVER", "SCOPE"))
-            for line in lines:
-                # Nur Netzwerke anzeigen, die 'gateway' enthalten
-                if "gateway" in line:
-                    print("  " + line)
-        else:
-            print("  ❌ Keine Netzwerke gefunden.")
-    except Exception as e:
-        print("  Fehler beim Auflisten der Netzwerke:", e)
-    print("################################")
-    print(" 📈 docker stats (Live-Überblick):")
-    subprocess.run(["docker", "stats", "--no-stream"])
-    print("################################")
+    print("══════════════════════════════════════════════")
 
-
-#########################################
-def get_image_status(image_name="gateway"):
+    # Images
     try:
-        result = subprocess.run(
-            ["docker", "images", "-q", image_name],
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
-            text=True
-        )
-        if result.stdout.strip():
-            return True
+        print("  📦 Docker Images:")
+        if _has_any(["docker", "images", "-q"]):
+            r = _run([
+                "docker", "images", "--format",
+                "table {{.Repository}}:{{.Tag}}	{{.ID}}	{{.Size}}"
+            ], capture=True, echo=False)
+            out = _to_text(getattr(r, "stdout", "")).strip() or "<none>"
+            print("" + out)
+        else:
+            print("  <keine Images gefunden>")
     except Exception:
-        pass
-    return False
+        print("  (Fehler beim Abrufen der Images)")
 
-def main():
-    if "OPENAI_API_KEY" in os.environ:
-        del os.environ["OPENAI_API_KEY"]
-    
-    if not get_image_status():
-        print("\n  No Image found.")
-        build_image()
-        quick_start()
+    # Container
+    try:
+        print("  🚢 Docker Container:")
+        if _has_any(["docker", "ps", "-a", "-q"]):
+            r = _run([
+                "docker", "ps", "-a", "--format",
+                "table {{.ID}}	{{.Names}}	{{.Status}}	{{.Image}}	{{.Command}}	{{.RunningFor}}	{{.Ports}}"
+            ], capture=True, echo=False)
+            out = _to_text(getattr(r, "stdout", "")).strip() or "<none>"
+            print("" + out)
+        else:
+            print("  <keine Container gefunden>")
+    except Exception:
+        print("  (Fehler beim Abrufen der Container)")
 
+    # Compose Services
+    try:
+        print("  🧩 Compose Services:")
+        r = _run([*compose.split(), "ps"], capture=True, echo=False)
+        out = _to_text(getattr(r, "stdout", "")).strip() or "<none>"
+        print("" + out)
+    except Exception:
+        print("  (Fehler beim Abrufen der Compose-Services)")
+
+
+# -----------------------------------------------------------------------------
+# Menu (reduced + debug)
+# -----------------------------------------------------------------------------
+
+def menu():
     while True:
-        menu()
+        print("################################")
+        print("### [Gateway Docker-Dev CLI] ###")
+        print("################################")
+        print_docker_overview()
+        print("################################")
+        print(" f: wipe/Rebuild")
+        print(" a: Start Server")
+        print(" s: Stop Server")
+        print(" k: Set OPENAI_API_KEY (+persist to .env)")
+        print(" r: Restart gateway (force-recreate)")
+        print(" x: Exit")
+        print("################################")
+        choice = input("> ").strip().lower()
         try:
-            choice = input("> ").strip().lower()
-            if choice == "r":
-                rebuild_image()
+            if choice == "f":
+                full_rebuild()
             elif choice == "a":
                 quick_start()
-            elif choice == "w":
-                wipe_all()
             elif choice == "s":
                 stop_container()
-            elif choice in ("x"):
-                print("Beende CLI... (Container bleibt, unless du zuvor 's' ausgeführt hast)")
+            elif choice == "k":
+                set_openai_key_interactive()
+            elif choice == "r":
+                restart_gateway(force_recreate=True)
+            elif choice in ("x", "q", "exit"):
+                print("Bye.")
                 break
             else:
-                print("❓ Unbekannte Eingabe.")
-        except Exception as ex:
-            print("\n❌ Ausnahme im Menü:")
+                print("Unbekannte Option.")
+        except KeyboardInterrupt:
+            print("(Abgebrochen)")
+        except subprocess.CalledProcessError as e:
+            print(f"Fehler (exit {e.returncode}): {' '.join(e.cmd) if isinstance(e.cmd, list) else e.cmd}")
+        except Exception:
             traceback.print_exc()
 
+
 if __name__ == "__main__":
-    main()
+    try:
+        menu()
+    except KeyboardInterrupt:
+        print("Bye.")

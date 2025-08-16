@@ -42,6 +42,7 @@ build/
 develop-eggs/
 dist/
 downloads/
+trashcan/
 eggs/
 .eggs/
 lib/

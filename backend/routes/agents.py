@@ -130,21 +130,5 @@ async def respond_agent(name: str, request: AgentMessage):
     except Exception as e:
         logger.exception(f"❌ Fehler bei Agentenantwort von '{name}'")
         raise HTTPException(status_code=500, detail=str(e))
-####################################
-from fastapi import Request, APIRouter
-from backend.agent_core.cluster import build_cluster
-router = APIRouter()
-
-@router.post("/chat/send_message")
-async def send_message(request: Request):
-    cluster = await build_cluster()
-    hub_manager = cluster["hub_manager"]
-    data = await request.json()
-    prompt = data.get("prompt")
-    # Session-/User-Handling für später, jetzt MVP:
-    # (ggf. Memory/Agent aus app.state holen)
-    response = hub_manager.run(message=prompt, messages=[])
-    assistant_msg = response.process() if hasattr(response, "process") else str(response)
-    return {"assistant_response": assistant_msg}
-
+    
 

@@ -1,9 +1,0 @@
-{
-  "room": "main_lobby",
-  "agents": ["user", "Admin"],
-  "status": "open",
-  "messages": [
-    {"role": "system", "content": "Lobby gestartet", "name": "system"}
-  ],
-  "resources": []
-}

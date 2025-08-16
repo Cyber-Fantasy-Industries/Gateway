@@ -10,36 +10,39 @@ services:
     ports:
       - "8080:8080"
     dns:
-      - 8.8.8.8
-      - 8.8.4.4
+      - 1.1.1.1   # Cloudflare
+      - 9.9.9.9   # Quad9
+    # oder: euer lokaler DNS (z. B. 192.168.178.1), falls öffentliche blockiert sind
+      - 192.168.178.1
+    extra_hosts:
+      - "api.getzep.com:172.66.40.150"
     volumes:
-      - ./backend:/app/backend  # Nur den Code, nicht das ganze Projekt
-      # Optional, falls du weitere Source-Verzeichnisse hast
+      - ./backend:/app/backend
       - ./utils:/app/utils
       - ./src:/app/src
       - ./config:/app/config:ro
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
     networks:
       - gateway-net
     environment:
       OPENAI_API_KEY: "${OPENAI_API_KEY}"
+      OPENAI_MODEL: gpt-4o-mini  
       OPENAI_PROJECT_ID: "${OPENAI_PROJECT_ID}"
       OPENAI_ORG_ID: "${OPENAI_ORG_ID}"
       PYTHONPATH: "/app"
+      GATEWAY_API_URL: "http://gateway:8080/api/chat"
+      # OPTIONAL, wenn du ein OpenAI-kompatibles Gateway nutzt (LM Studio, OpenRouter, o.ä.):
+      # OPENAI_BASE_URL: https://api.openai.com/v1
+      LLM_DEBUG: "1"   
+
     env_file:
       - .env
     restart: no
 
-  # streamlit:
-  #   build: .
-  #   image: gateway
-  #   # ALS STRING, nicht als LIST!
-  #   command: /app/.venv/bin/streamlit run backend/app.py
-  #   ports:
-  #     - "8501:8501"
-  #   environment:
-  #     - PYTHONPATH=/app
-  #   depends_on:
-  #     - gateway
 networks:
   gateway-net:
     driver: bridge
+    
+volumes:                   
+  zep_state: {}  
